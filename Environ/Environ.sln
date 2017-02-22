@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Regulations", "Regulations"
 	ProjectSection(SolutionItems) = preProject
 		Regulation\BranchRule.md = Regulation\BranchRule.md
 		Regulation\CodingRule.md = Regulation\CodingRule.md
+		Regulation\EngineDevelopmentRule.md = Regulation\EngineDevelopmentRule.md
 		Regulation\TestRule.md = Regulation\TestRule.md
 		Regulation\VersionRule.md = Regulation\VersionRule.md
 	EndProjectSection
