@@ -23,23 +23,21 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Header\__CoreSystem.cxx">
+    <ClCompile Include="Source\__CoreSystem.cxx">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="App\main.cc">
+    <ClCompile Include="Source\__Scene.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Header\Scene.cpp">
+    <ClCompile Include="Source\CoreSystem.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Header\__Scene.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Header\CoreSystem.cpp">
+    <ClCompile Include="Source\Scene.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Config\wxWidgetsLinkerFIles_Debug.props" />
+    <None Include="Readme.md" />
   </ItemGroup>
 </Project>

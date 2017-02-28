@@ -16,7 +16,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Regulations", "Regulations"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Windows10", "Windows10", "{6E85F1B1-E66A-4014-B4EC-9B4945070489}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "win10_CoreSystem", "win10_CoreSystem\win10_CoreSystem.vcxproj", "{5A872FB9-8C95-48C1-873E-B4B1A3165884}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "win10_Application", "win10_Application\win10_Application.vcxproj", "{5A872FB9-8C95-48C1-873E-B4B1A3165884}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{12E7F72F-84B8-4EBF-8735-FAB93FDFED63}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SystemTest", "__TestProjects\mstybird\SystemTest\SystemTest.vcxproj", "{2A03568C-A53D-4522-9EC3-766A54AFB0F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,11 +46,20 @@ Global
 		{5A872FB9-8C95-48C1-873E-B4B1A3165884}.Release|x64.Build.0 = Release|x64
 		{5A872FB9-8C95-48C1-873E-B4B1A3165884}.Release|x86.ActiveCfg = Release|Win32
 		{5A872FB9-8C95-48C1-873E-B4B1A3165884}.Release|x86.Build.0 = Release|Win32
+		{2A03568C-A53D-4522-9EC3-766A54AFB0F0}.Debug|x64.ActiveCfg = Debug|x64
+		{2A03568C-A53D-4522-9EC3-766A54AFB0F0}.Debug|x64.Build.0 = Debug|x64
+		{2A03568C-A53D-4522-9EC3-766A54AFB0F0}.Debug|x86.ActiveCfg = Debug|Win32
+		{2A03568C-A53D-4522-9EC3-766A54AFB0F0}.Debug|x86.Build.0 = Debug|Win32
+		{2A03568C-A53D-4522-9EC3-766A54AFB0F0}.Release|x64.ActiveCfg = Release|x64
+		{2A03568C-A53D-4522-9EC3-766A54AFB0F0}.Release|x64.Build.0 = Release|x64
+		{2A03568C-A53D-4522-9EC3-766A54AFB0F0}.Release|x86.ActiveCfg = Release|Win32
+		{2A03568C-A53D-4522-9EC3-766A54AFB0F0}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{5A872FB9-8C95-48C1-873E-B4B1A3165884} = {6E85F1B1-E66A-4014-B4EC-9B4945070489}
+		{2A03568C-A53D-4522-9EC3-766A54AFB0F0} = {12E7F72F-84B8-4EBF-8735-FAB93FDFED63}
 	EndGlobalSection
 EndGlobal
