@@ -14,6 +14,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Regulations", "Regulations"
 		Regulation\VersionRule.md = Regulation\VersionRule.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Windows10", "Windows10", "{6E85F1B1-E66A-4014-B4EC-9B4945070489}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "win10_CoreSystem", "win10_CoreSystem\win10_CoreSystem.vcxproj", "{5A872FB9-8C95-48C1-873E-B4B1A3165884}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -30,8 +34,19 @@ Global
 		{B00EF9EF-6967-4724-8159-84D4CD191C42}.Release|x64.Build.0 = Release|x64
 		{B00EF9EF-6967-4724-8159-84D4CD191C42}.Release|x86.ActiveCfg = Release|Win32
 		{B00EF9EF-6967-4724-8159-84D4CD191C42}.Release|x86.Build.0 = Release|Win32
+		{5A872FB9-8C95-48C1-873E-B4B1A3165884}.Debug|x64.ActiveCfg = Debug|x64
+		{5A872FB9-8C95-48C1-873E-B4B1A3165884}.Debug|x64.Build.0 = Debug|x64
+		{5A872FB9-8C95-48C1-873E-B4B1A3165884}.Debug|x86.ActiveCfg = Debug|Win32
+		{5A872FB9-8C95-48C1-873E-B4B1A3165884}.Debug|x86.Build.0 = Debug|Win32
+		{5A872FB9-8C95-48C1-873E-B4B1A3165884}.Release|x64.ActiveCfg = Release|x64
+		{5A872FB9-8C95-48C1-873E-B4B1A3165884}.Release|x64.Build.0 = Release|x64
+		{5A872FB9-8C95-48C1-873E-B4B1A3165884}.Release|x86.ActiveCfg = Release|Win32
+		{5A872FB9-8C95-48C1-873E-B4B1A3165884}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5A872FB9-8C95-48C1-873E-B4B1A3165884} = {6E85F1B1-E66A-4014-B4EC-9B4945070489}
 	EndGlobalSection
 EndGlobal
