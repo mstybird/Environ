@@ -1,7 +1,6 @@
 #pragma once
 #include <System/CoreSystem.hpp>
 #include<wx/wx.h>
-#include <forward_list>
 namespace Environ {
 	//ƒVƒ“ƒOƒ‹ƒgƒ“ŽÀ‘•
 	class CoreSystem::__CoreSystem :public wxApp{
@@ -17,5 +16,9 @@ namespace Environ {
 		*/
 		void OnIdle(wxIdleEvent& event);
 
+		static void AddSetupFunction(std::function<bool()> aFunction);
+
+	private:
+		static std::function<bool()> sSetupFumction;
 	};
 }

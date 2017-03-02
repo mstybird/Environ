@@ -1,5 +1,7 @@
 #pragma once
 #include<memory>
+#include<Configure/DLLSettings.hpp>
+
 namespace Environ {
 	/**
 	 * @class Scene
@@ -20,7 +22,7 @@ namespace Environ {
 			@return 生成に成功すればウィンドウIDが帰る。失敗の場合は 0
 		
 		*/
-		static int Create(const char* aWindowTitle, const int aPositionX, const int aPositionY, const int aWidth, const int aHeight);
+	DllEntry static int Create(const char* aWindowTitle, const int aPositionX, const int aPositionY, const int aWidth, const int aHeight);
 
 
 		static int GetClientWidth(const int aWindowId);

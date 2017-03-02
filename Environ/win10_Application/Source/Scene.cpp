@@ -2,9 +2,9 @@
 #include "..\..\GameEngine\Header\System\Scene.hpp"
 #include "System\Scene.hpp"
 #include "__Scene.hpp"
-#include<Debug/Debug.hh>
 #include "..\..\GameEngine\Header\System\CoreSystem.hpp"
 #include <wx\wx.h>
+#include<Debug/Memory.hpp>
 int Environ::Window::Create(const char * aWindowTitle, const int aPositionX, const int aPositionY, const int aWidth, const int aHeight)
 {
 

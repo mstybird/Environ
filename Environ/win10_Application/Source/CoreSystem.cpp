@@ -8,3 +8,4 @@ Environ::CoreSystem::CoreSystem() {
 Environ::CoreSystem::~CoreSystem()
 {
 }
+

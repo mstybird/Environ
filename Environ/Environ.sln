@@ -22,6 +22,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{12E7F72F-8
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SystemTest", "__TestProjects\mstybird\SystemTest\SystemTest.vcxproj", "{2A03568C-A53D-4522-9EC3-766A54AFB0F0}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "win10_Environ", "win10_Environ\win10_Environ.vcxproj", "{22968ABE-E95C-4E46-8FBD-1E4B2BFBCADC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -54,6 +56,14 @@ Global
 		{2A03568C-A53D-4522-9EC3-766A54AFB0F0}.Release|x64.Build.0 = Release|x64
 		{2A03568C-A53D-4522-9EC3-766A54AFB0F0}.Release|x86.ActiveCfg = Release|Win32
 		{2A03568C-A53D-4522-9EC3-766A54AFB0F0}.Release|x86.Build.0 = Release|Win32
+		{22968ABE-E95C-4E46-8FBD-1E4B2BFBCADC}.Debug|x64.ActiveCfg = Debug|x64
+		{22968ABE-E95C-4E46-8FBD-1E4B2BFBCADC}.Debug|x64.Build.0 = Debug|x64
+		{22968ABE-E95C-4E46-8FBD-1E4B2BFBCADC}.Debug|x86.ActiveCfg = Debug|Win32
+		{22968ABE-E95C-4E46-8FBD-1E4B2BFBCADC}.Debug|x86.Build.0 = Debug|Win32
+		{22968ABE-E95C-4E46-8FBD-1E4B2BFBCADC}.Release|x64.ActiveCfg = Release|x64
+		{22968ABE-E95C-4E46-8FBD-1E4B2BFBCADC}.Release|x64.Build.0 = Release|x64
+		{22968ABE-E95C-4E46-8FBD-1E4B2BFBCADC}.Release|x86.ActiveCfg = Release|Win32
+		{22968ABE-E95C-4E46-8FBD-1E4B2BFBCADC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,5 +71,6 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{5A872FB9-8C95-48C1-873E-B4B1A3165884} = {6E85F1B1-E66A-4014-B4EC-9B4945070489}
 		{2A03568C-A53D-4522-9EC3-766A54AFB0F0} = {12E7F72F-84B8-4EBF-8735-FAB93FDFED63}
+		{22968ABE-E95C-4E46-8FBD-1E4B2BFBCADC} = {6E85F1B1-E66A-4014-B4EC-9B4945070489}
 	EndGlobalSection
 EndGlobal

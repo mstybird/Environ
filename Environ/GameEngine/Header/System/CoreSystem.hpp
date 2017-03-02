@@ -1,7 +1,8 @@
 #pragma once
+#include <sal.h>
+#include <wtypes.h>
 namespace Environ {
 	//アプリケーション全体のシステム
-	//シングルトン設計する
 	/**
 	 * @class CoreSystem
 	 *
@@ -10,7 +11,7 @@ namespace Environ {
 	class CoreSystem
 	{
 	public:
-
+		/**< OS固有のシステムを定義 */
 		class __CoreSystem;
 	private:
 		/**
@@ -21,8 +22,6 @@ namespace Environ {
 		@brief 使用しない
 		*/
 		~CoreSystem();
-
-		static bool SetupWizard();
 
 	};
 
