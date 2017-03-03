@@ -16,7 +16,7 @@ void Environ::CoreSystem::__CoreSystem::OnIdle(wxIdleEvent &)
 
 }
 
-void Environ::CoreSystem::__CoreSystem::AddSetupFunction(std::function<bool()> aFunction)
+void Environ::CoreSystem::__CoreSystem::SettingWizardFunction(std::function<bool()> aFunction)
 {
 	sSetupFumction = aFunction;
 }

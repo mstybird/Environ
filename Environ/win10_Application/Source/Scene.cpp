@@ -4,7 +4,7 @@
 #include "__Scene.hpp"
 #include "..\..\GameEngine\Header\System\CoreSystem.hpp"
 #include <wx\wx.h>
-#include<Debug/Memory.hpp>
+#include<Configure/Memory.hpp>
 int Environ::Window::Create(const char * aWindowTitle, const int aPositionX, const int aPositionY, const int aWidth, const int aHeight)
 {
 

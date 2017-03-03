@@ -38,7 +38,7 @@
     <ClCompile Include="Source\Scene.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Header\__EntryPoint.cpp">
+    <ClCompile Include="Source\__EntryPoint.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>

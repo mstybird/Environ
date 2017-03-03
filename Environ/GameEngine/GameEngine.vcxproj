@@ -113,6 +113,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Header\Configure\Memory.hpp" />
     <ClInclude Include="Header\Debug\Memory.hpp" />
     <ClInclude Include="Header\Configure\DLLSettings.hpp" />
     <ClInclude Include="Header\System\CoreSystem.hpp" />

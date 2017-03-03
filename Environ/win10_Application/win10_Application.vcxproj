@@ -200,7 +200,7 @@
     <ClInclude Include="Header\__Scene.hpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Header\__EntryPoint.cpp" />
+    <ClCompile Include="Source\__EntryPoint.cpp" />
     <ClCompile Include="Source\CoreSystem.cpp" />
     <ClCompile Include="Source\Scene.cpp" />
     <ClCompile Include="Source\__CoreSystem.cxx" />
