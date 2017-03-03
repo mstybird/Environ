@@ -3,7 +3,6 @@
 
 # User-specific files
 *.suo
-*.user
 *.userosscache
 *.sln.docstates
 
@@ -50,6 +49,7 @@ artifacts/
 *.ilk
 *.meta
 *.obj
+*.exp
 *.pch
 *.pdb
 *.pgc
