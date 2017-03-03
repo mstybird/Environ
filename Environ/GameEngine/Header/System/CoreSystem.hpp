@@ -1,4 +1,15 @@
 #pragma once
+
+/**
+	@file CoreSystem.hpp
+	@date Create for 2017/03/03 23:26
+
+	@author msty
+
+	 * @brief アプリケーションを管理しているクラス。
+	 アプリケーション単位で処理する際に使用。
+*/
+
 #include <sal.h>
 #include <wtypes.h>
 namespace Environ {
@@ -6,7 +17,8 @@ namespace Environ {
 	/**
 	 * @class CoreSystem
 	 *
-	 * @brief 
+	@brief アプリケーション全体に影響する処理、もしくはアプリケーションからデータを取得する際に使用。
+	このクラスはインスタンス化できない
 	*/
 	class CoreSystem
 	{

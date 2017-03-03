@@ -10,6 +10,8 @@ int Environ::Window::Create(const char * aWindowTitle, const int aPositionX, con
 
 	auto lScene = new __Window(aWindowTitle, aPositionX, aPositionY, aWidth, aHeight);
 	if (!lScene)return 0;
+
+	//ウィンドウ識別IDを返す
 	return lScene->GetId();
 
 }
@@ -17,6 +19,7 @@ int Environ::Window::Create(const char * aWindowTitle, const int aPositionX, con
 int Environ::Window::GetClientWidth(const int aWindowId)
 {
 	auto lWindow = wxWindow::FindWindowById(aWindowId);
+	//ウィンドウが存在していればクライアントサイズ(幅)を返す。
 	if (lWindow) {
 		return lWindow->GetClientSize().GetWidth();
 	}

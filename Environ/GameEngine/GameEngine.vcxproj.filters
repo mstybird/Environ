@@ -18,9 +18,6 @@
     <ClInclude Include="Header\System\CoreSystem.hpp">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Header\System\Layer.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="Header\System\EntryPoint.hpp">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
