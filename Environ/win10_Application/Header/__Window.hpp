@@ -9,7 +9,7 @@
 	@brief 親ウィンドウの定義をしているファイル
 */
 
-#include <System\Scene.hpp>
+#include <System\Window.hpp>
 #include <wx\frame.h>
 
 namespace Environ {

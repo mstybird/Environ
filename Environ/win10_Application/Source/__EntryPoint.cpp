@@ -1,6 +1,6 @@
 #include "__EntryPoint.hxx"
 #include "__CoreSystem.hxx"
-#include "wx\init.h"
+#include <wx\init.h>
 #include <wtypes.h>
 
 

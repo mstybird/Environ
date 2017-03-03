@@ -1,4 +1,4 @@
-#include<System/Scene.hpp>
+#include<System/Window.hpp>
 #include <System/EntryPoint.hpp>
 
 bool Environ::SetupWizard() {

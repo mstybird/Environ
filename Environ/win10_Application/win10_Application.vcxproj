@@ -197,14 +197,14 @@
   <ItemGroup>
     <ClInclude Include="Header\__CoreSystem.hxx" />
     <ClInclude Include="Header\__EntryPoint.hxx" />
-    <ClInclude Include="Header\__Scene.hpp" />
+    <ClInclude Include="Header\__Window.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\__EntryPoint.cpp" />
     <ClCompile Include="Source\CoreSystem.cpp" />
     <ClCompile Include="Source\Scene.cpp" />
     <ClCompile Include="Source\__CoreSystem.cxx" />
-    <ClCompile Include="Source\__Scene.cpp" />
+    <ClCompile Include="Source\__Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Readme.md" />

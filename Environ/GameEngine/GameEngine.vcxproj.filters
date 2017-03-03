@@ -27,12 +27,12 @@
     <ClInclude Include="Header\Debug\Memory.hpp">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Header\Configure\Memory.hpp">
+    <ClInclude Include="Header\Configure\DebugMemory.hpp">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Header\System\Scene.hpp">
+    <ClCompile Include="Header\System\Window.hpp">
       <Filter>ヘッダー ファイル</Filter>
     </ClCompile>
   </ItemGroup>

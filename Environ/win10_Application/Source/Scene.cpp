@@ -1,10 +1,11 @@
-#include "..\..\GameEngine\Header\System\Scene.hpp"
-#include "..\..\GameEngine\Header\System\Scene.hpp"
-#include "System\Scene.hpp"
-#include "__Scene.hpp"
-#include "..\..\GameEngine\Header\System\CoreSystem.hpp"
-#include <wx\wx.h>
+#include <System\Window.hpp>
+#include <System\CoreSystem.hpp>
 #include<Configure/Memory.hpp>
+
+#include "__Window.hpp"
+
+#include <wx\wx.h>
+
 int Environ::Window::Create(const char * aWindowTitle, const int aPositionX, const int aPositionY, const int aWidth, const int aHeight)
 {
 
