@@ -1,4 +1,4 @@
-#include"PreCompiled.hpp"
+#include"Configure\Integration.hh"
 #include <System\CoreSystem.hpp>
 #include "__CoreSystem.hxx"
 #include "__Window.hpp"

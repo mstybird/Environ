@@ -118,18 +118,22 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Header\Configure\DebugMemory.hpp" />
-    <ClInclude Include="Header\Configure\wxWidgetsSettings.hpp" />
+    <ClInclude Include="Header\Configure\wxWidgetsLinkSetting.hpp" />
     <ClInclude Include="Header\Debug\Memory.hpp" />
     <ClInclude Include="Header\Configure\DLLSettings.hpp" />
     <ClInclude Include="Header\PreCompiled\C++.hpp" />
     <ClInclude Include="Header\PreCompiled\C++11.hpp" />
-    <ClInclude Include="Header\PreCompiled\windows.hpp" />
     <ClInclude Include="Header\Rendering\LayerGUI.hpp" />
     <ClInclude Include="Header\System\CoreSystem.hpp" />
     <ClInclude Include="Header\System\EntryPoint.hpp" />
+    <ClInclude Include="Header\Configure\Integration.hh" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Header\System\Window.hpp" />
+    <ClCompile Include="Template\PreCompiled\Integration.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Readme.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

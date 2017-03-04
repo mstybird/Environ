@@ -1,4 +1,4 @@
-#include"PreCompiled.hpp"
+#include"Configure\Integration.hh"
 #include "__CoreSystem.hxx"
 
 std::function<bool()> Environ::CoreSystem::__CoreSystem::sSetupFumction; /* セットアップ関数の実体化 */

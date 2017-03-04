@@ -6,7 +6,7 @@
   <ItemDefinitionGroup>
     <ClCompile>
       <AdditionalIncludeDirectories>$(SolutionDir)ExternalLibrary\wxWidgets\include;$(SolutionDir)ExternalLibrary\wxWidgets\include\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WXUSINGDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WXUSINGDLL;USING_LIBRARY_WXWIDGETS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>$(SolutionDir)ExternalLibrary\wxWidgets\lib\dll_$(PlatformShortName)</AdditionalLibraryDirectories>

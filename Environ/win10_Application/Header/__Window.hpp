@@ -9,7 +9,7 @@
 	@brief 親ウィンドウの定義をしているファイル
 */
 
-#include"PreCompiled.hpp"
+#include"Configure\Integration.hh"
 #include <System\Window.hpp>
 
 namespace Environ {
