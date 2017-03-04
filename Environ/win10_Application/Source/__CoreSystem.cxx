@@ -1,10 +1,9 @@
+#include"PreCompiled.hpp"
 #include "__CoreSystem.hxx"
-#include <sal.h>
-#include <wtypes.h>
 
 std::function<bool()> Environ::CoreSystem::__CoreSystem::sSetupFumction; /* セットアップ関数の実体化 */
 
-/*
+/* 
 	イベントの登録など
 */
 bool Environ::CoreSystem::__CoreSystem::OnInit()

@@ -118,8 +118,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Header\Configure\DebugMemory.hpp" />
+    <ClInclude Include="Header\Configure\wxWidgetsSettings.hpp" />
     <ClInclude Include="Header\Debug\Memory.hpp" />
     <ClInclude Include="Header\Configure\DLLSettings.hpp" />
+    <ClInclude Include="Header\PreCompiled\C++.hpp" />
+    <ClInclude Include="Header\PreCompiled\C++11.hpp" />
+    <ClInclude Include="Header\PreCompiled\windows.hpp" />
+    <ClInclude Include="Header\Rendering\LayerGUI.hpp" />
     <ClInclude Include="Header\System\CoreSystem.hpp" />
     <ClInclude Include="Header\System\EntryPoint.hpp" />
   </ItemGroup>

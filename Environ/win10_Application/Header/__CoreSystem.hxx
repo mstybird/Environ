@@ -9,7 +9,9 @@
 */
 
 #include <System/CoreSystem.hpp>
-#include<wx/app.h>
+
+#include"PreCompiled.hpp"
+
 namespace Environ {
 	//ƒVƒ“ƒOƒ‹ƒgƒ“ŽÀ‘•
 	/**

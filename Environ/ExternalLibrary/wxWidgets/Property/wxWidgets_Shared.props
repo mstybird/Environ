@@ -8,6 +8,9 @@
       <AdditionalIncludeDirectories>$(SolutionDir)ExternalLibrary\wxWidgets\include;$(SolutionDir)ExternalLibrary\wxWidgets\include\msw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WXUSINGDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)ExternalLibrary\wxWidgets\lib\dll_$(PlatformShortName)</AdditionalLibraryDirectories>
+    </Link>
   </ItemDefinitionGroup>
   <ItemGroup />
 </Project>

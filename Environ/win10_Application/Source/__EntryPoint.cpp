@@ -1,7 +1,6 @@
+#include"PreCompiled.hpp"
 #include "__EntryPoint.hxx"
 #include "__CoreSystem.hxx"
-#include <wx\init.h>
-#include <wtypes.h>
 
 
 wxIMPLEMENT_APP_NO_MAIN(Environ::CoreSystem::__CoreSystem);

@@ -1,3 +1,5 @@
+#include<PreCompiled.hpp>
+
 #include <__EntryPoint.hxx>
 #include <System/EntryPoint.hpp>
 
@@ -5,6 +7,7 @@
 #include <crtdbg.h>  
 #include <wtypes.h>
 
+#include<Configure/DebugMemory.hpp>
 /**
 	@brief Windows向けエントリーポイント
 	

@@ -9,8 +9,8 @@
 	@brief 親ウィンドウの定義をしているファイル
 */
 
+#include"PreCompiled.hpp"
 #include <System\Window.hpp>
-#include <wx\frame.h>
 
 namespace Environ {
 	//
