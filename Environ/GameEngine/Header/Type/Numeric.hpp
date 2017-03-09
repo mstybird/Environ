@@ -295,7 +295,7 @@ namespace Environ {
 		protected:
 		T mValue; /**< 数値データ */
 		
-	};
+	}; 
 }
 #include"Numeric.inl"
 
