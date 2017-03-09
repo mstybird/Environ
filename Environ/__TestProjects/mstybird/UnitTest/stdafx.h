@@ -13,4 +13,4 @@
 // TODO: プログラムに必要な追加ヘッダーをここで参照してください
 #include<Configure/Integration.hh>
 #include<Type/Numeric.hpp>
-
+#include<Type/Integer.hpp>

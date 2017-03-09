@@ -135,6 +135,7 @@
     <ClCompile Include="Template\PreCompiled\Integration.cc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Header\Type\Integer.inl" />
     <None Include="Header\Type\Numeric.inl" />
     <None Include="Readme.md" />
   </ItemGroup>

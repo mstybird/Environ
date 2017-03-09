@@ -65,5 +65,8 @@
     <None Include="Header\Type\Numeric.inl">
       <Filter>ヘッダー ファイル</Filter>
     </None>
+    <None Include="Header\Type\Integer.inl">
+      <Filter>ヘッダー ファイル</Filter>
+    </None>
   </ItemGroup>
 </Project>

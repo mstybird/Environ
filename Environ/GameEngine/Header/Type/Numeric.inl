@@ -53,26 +53,9 @@ namespace Environ {
 
 	}
 
-	template<typename T>
-	Numeric<T>& Numeric<T>::operator%=(const T& aVal){
-		mValue %= aVal;
-		return *this;
 
-	}
 
-	template<typename T>
-	Numeric<T>& Numeric<T>::operator>>=(const T& aVal){
-		mValue >>= aVal;
-		return *this;
 
-	}
-
-	template<typename T>
-	Numeric<T>& Numeric<T>::operator<<=(const T& aVal){
-		mValue <<= aVal;
-		return *this;
-
-	}
 
 
 	//演算
@@ -97,20 +80,8 @@ namespace Environ {
 		return Numeric(mValue) /= aVal;
 	}
 
-	template<typename T>
-	Numeric<T> Numeric<T>::operator%(const T& aVal)const{
-		return Numeric(mValue) %= aVal;
-	}
 
-	template<typename T>
-	Numeric<T> Numeric<T>::operator>>(const T& aVal)const{
-		return Numeric(mValue) >>= aVal;
-	}
 
-	template<typename T>
-	Numeric<T> Numeric<T>::operator<<(const T& aVal)const{
-		return Numeric(mValue) <<= aVal;
-	}
 
 
 	//比較
@@ -147,75 +118,6 @@ namespace Environ {
 	bool Numeric<T>::operator>=(const T& aVal)const{
 		return mValue >= aVal;
 
-	}
-
-
-	//論理
-	template<typename T>
-	Numeric<T> Numeric<T>::operator&(const T&aVal){
-		return Numeric(mValue) &= aVal;
-	}
-
-	template<typename T>
-	Numeric<T> Numeric<T>::operator^(const T&aVal){
-		return Numeric(mValue) ^= aVal;
-	}
-
-	template<typename T>
-	Numeric<T> Numeric<T>::operator|(const T&aVal){
-		return Numeric(mValue) |= aVal;
-	}
-
-	template<typename T>
-	Numeric<T> Numeric<T>::operator~()const noexcept {
-		return Numeric(~mValue);
-	}
-
-
-	template<typename T>
-	Numeric<T> Numeric<T>::operator&=(const T&aVal){
-		mValue &= aVal;
-		return *this;
-	}
-
-	template<typename T>
-	Numeric<T> Numeric<T>::operator^=(const T&aVal){
-		mValue ^= aVal;
-		return *this;
-	}
-
-	template<typename T>
-	Numeric<T> Numeric<T>::operator|=(const T&aVal){
-		mValue |= aVal;
-		return *this;
-	}
-
-
-	//インクリデクリ
-	template<typename T>
-	Numeric<T>& Numeric<T>::operator ++(){
-		++mValue;
-		return *this;
-	}
-
-	template<typename T>
-	Numeric<T>& Numeric<T>::operator --(){
-		--mValue;
-		return *this;
-	}
-
-	template<typename T>
-	Numeric<T> Numeric<T>::operator ++(int){
-		auto lTemp = *this;
-		++mValue;
-		return lTemp;
-	}
-
-	template<typename T>
-	Numeric<T> Numeric<T>::operator --(int){
-		auto lTemp = *this;
-		--mValue;
-		return lTemp;
 	}
 
 

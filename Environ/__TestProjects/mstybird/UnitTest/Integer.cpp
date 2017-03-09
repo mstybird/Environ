@@ -1,6 +1,5 @@
-#include "stdafx.h"
-#include "CppUnitTest.h"
-void f() {
+#include"stdafx.h"
+void f2() {
 	__COUNTER__;
 	__COUNTER__;
 	__COUNTER__;
@@ -19,10 +18,11 @@ using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 #define JOIN(x, y) JOIN_AGAIN(x, y)
 #define JOIN_AGAIN(x, y) x ## y ## _
 #define TEST_FUNC(FuncName) TEST_METHOD(JOIN(Case,__COUNTER__)FuncName)
+
 namespace Type
 {
 
-	TEST_CLASS(Numeric)
+	TEST_CLASS(Integer)
 	{
 	public:
 
@@ -30,21 +30,21 @@ namespace Type
 		//コンストラクタテスト
 		TEST_FUNC(Test)
 		{
-			Environ::Numeric<> i;
+			Environ::Integer<> i;
 			Assert::AreEqual<int>(i, 0);
 		}
 
 		//コンストラクタテスト
 		TEST_FUNC(Constructor2)
 		{
-			Environ::Numeric<> i(10);
+			Environ::Integer<> i(10);
 			Assert::AreEqual<int>(i, 10);
 		}
 
 		//代入テスト
 		TEST_FUNC(Substitution1)
 		{
-			Environ::Numeric<> i;
+			Environ::Integer<> i;
 			i = 10;
 			Assert::AreEqual<int>(i, 10);
 		}
@@ -52,7 +52,7 @@ namespace Type
 		//代入テスト
 		TEST_FUNC(Substitution2)
 		{
-			Environ::Numeric<> i;
+			Environ::Integer<> i;
 			i = -10;
 			Assert::AreEqual<int>(i, -10);
 		}
@@ -60,7 +60,7 @@ namespace Type
 		//代入テスト
 		TEST_FUNC(Substitution3)
 		{
-			Environ::Numeric<> i;
+			Environ::Integer<> i;
 			i = INT_MIN;
 			Assert::AreEqual<int>(i, INT_MIN);
 		}
@@ -68,7 +68,7 @@ namespace Type
 		//代入テスト
 		TEST_FUNC(Substitution4)
 		{
-			Environ::Numeric<> i;
+			Environ::Integer<> i;
 			i = INT_MAX;
 			Assert::AreEqual<int>(i, INT_MAX);
 		}
@@ -76,7 +76,7 @@ namespace Type
 		//代入テスト
 		TEST_FUNC(Substitution5)
 		{
-			Environ::Numeric<> i;
+			Environ::Integer<> i;
 			i = 10;
 			Assert::AreEqual<int>(i, 10);
 		}
@@ -84,7 +84,7 @@ namespace Type
 		//代入テスト
 		TEST_FUNC(Substitution6)
 		{
-			Environ::Numeric<> i;
+			Environ::Integer<> i;
 			i = -10;
 			Assert::AreEqual<int>(i, -10);
 		}
@@ -92,7 +92,7 @@ namespace Type
 		//代入テスト
 		TEST_FUNC(Substitution7)
 		{
-			Environ::Numeric<short> i;
+			Environ::Integer<short> i;
 			i = SHRT_MIN;
 			Assert::AreEqual<int>(i, SHRT_MIN);
 		}
@@ -100,7 +100,7 @@ namespace Type
 		//代入テスト
 		TEST_FUNC(Substitution8)
 		{
-			Environ::Numeric<> i;
+			Environ::Integer<> i;
 			i = SHRT_MAX;
 			Assert::AreEqual<int>(i, SHRT_MAX);
 		}
@@ -108,15 +108,15 @@ namespace Type
 		//加算代入テスト
 		TEST_FUNC(AddEqual1)
 		{
-			Environ::Numeric<> i;
-			i +=20;
+			Environ::Integer<> i;
+			i += 20;
 			Assert::AreEqual<int>(i, 20);
 		}
 
 		//減算代入テスト
 		TEST_FUNC(SubEqual1)
 		{
-			Environ::Numeric<> i;
+			Environ::Integer<> i;
 			i -= 20;
 			Assert::AreEqual<int>(i, -20);
 		}
@@ -124,25 +124,25 @@ namespace Type
 		//乗算代入テスト
 		TEST_FUNC(ModEqual1)
 		{
-			Environ::Numeric<> i(5);
+			Environ::Integer<> i(5);
 			i *= 20;
-			Assert::AreEqual<int>(i, 5*20);
+			Assert::AreEqual<int>(i, 5 * 20);
 		}
 
 		//除算代入テスト
 		TEST_FUNC(DivEqual1)
 		{
-			Environ::Numeric<> i(500);
+			Environ::Integer<> i(500);
 			i /= 20;
-			Assert::AreEqual<int>(i, 500/20);
+			Assert::AreEqual<int>(i, 500 / 20);
 		}
 
 
 		//加算テスト
 		TEST_FUNC(Add1)
 		{
-			Environ::Numeric<> i1(300);
-			Environ::Numeric<> i2(20);
+			Environ::Integer<> i1(300);
+			Environ::Integer<> i2(20);
 
 			Assert::AreEqual<int>(i1 + i2, 300 + 20);
 		}
@@ -150,8 +150,8 @@ namespace Type
 		//減算テスト
 		TEST_FUNC(Sub1)
 		{
-			Environ::Numeric<> i1(300);
-			Environ::Numeric<> i2(20);
+			Environ::Integer<> i1(300);
+			Environ::Integer<> i2(20);
 
 			Assert::AreEqual<int>(i1 - i2, 300 - 20);
 		}
@@ -159,8 +159,8 @@ namespace Type
 		//乗算テスト
 		TEST_FUNC(Mod1)
 		{
-			Environ::Numeric<> i1(300);
-			Environ::Numeric<> i2(20);
+			Environ::Integer<> i1(300);
+			Environ::Integer<> i2(20);
 
 			Assert::AreEqual<int>(i1*i2, 300 * 20);
 		}
@@ -168,8 +168,8 @@ namespace Type
 		//除算テスト
 		TEST_FUNC(Div1)
 		{
-			Environ::Numeric<> i1(300);
-			Environ::Numeric<> i2(20);
+			Environ::Integer<> i1(300);
+			Environ::Integer<> i2(20);
 
 			Assert::AreEqual<int>(i1 / i2, 300 / 20);
 		}
@@ -178,8 +178,8 @@ namespace Type
 		//比較テスト
 		TEST_FUNC(Equal1)
 		{
-			Environ::Numeric<> i1(300);
-			Environ::Numeric<> i2(300);
+			Environ::Integer<> i1(300);
+			Environ::Integer<> i2(300);
 
 			Assert::AreEqual(i1 == i2, true);
 		}
@@ -187,8 +187,8 @@ namespace Type
 		//比較テスト
 		TEST_FUNC(Equal2)
 		{
-			Environ::Numeric<> i1(300);
-			Environ::Numeric<> i2(30);
+			Environ::Integer<> i1(300);
+			Environ::Integer<> i2(30);
 
 			Assert::AreEqual(i1 == i2, false);
 		}
@@ -196,8 +196,8 @@ namespace Type
 		//比較テスト
 		TEST_FUNC(NotEqual1)
 		{
-			Environ::Numeric<> i1(300);
-			Environ::Numeric<> i2(300);
+			Environ::Integer<> i1(300);
+			Environ::Integer<> i2(300);
 
 			Assert::AreEqual(i1 != i2, false);
 		}
@@ -205,8 +205,8 @@ namespace Type
 		//比較テスト
 		TEST_FUNC(NotEqual2)
 		{
-			Environ::Numeric<> i1(300);
-			Environ::Numeric<> i2(30);
+			Environ::Integer<> i1(300);
+			Environ::Integer<> i2(30);
 
 			Assert::AreEqual(i1 != i2, true);
 		}
@@ -214,8 +214,8 @@ namespace Type
 		//比較テスト
 		TEST_FUNC(Graeter1)
 		{
-			Environ::Numeric<> i1(300);
-			Environ::Numeric<> i2(300);
+			Environ::Integer<> i1(300);
+			Environ::Integer<> i2(300);
 
 			Assert::AreEqual(i1 < i2, false);
 		}
@@ -223,8 +223,8 @@ namespace Type
 		//比較テスト
 		TEST_FUNC(Graeter2)
 		{
-			Environ::Numeric<> i1(300);
-			Environ::Numeric<> i2(30);
+			Environ::Integer<> i1(300);
+			Environ::Integer<> i2(30);
 
 			Assert::AreEqual(i1 < i2, false);
 		}
@@ -232,8 +232,8 @@ namespace Type
 		//比較テスト
 		TEST_FUNC(Graeter3)
 		{
-			Environ::Numeric<> i1(30);
-			Environ::Numeric<> i2(300);
+			Environ::Integer<> i1(30);
+			Environ::Integer<> i2(300);
 
 			Assert::AreEqual(i1 < i2, true);
 		}
@@ -241,8 +241,8 @@ namespace Type
 		//比較テスト
 		TEST_FUNC(GraeterThan1)
 		{
-			Environ::Numeric<> i1(300);
-			Environ::Numeric<> i2(300);
+			Environ::Integer<> i1(300);
+			Environ::Integer<> i2(300);
 
 			Assert::AreEqual(i1 <= i2, true);
 		}
@@ -250,8 +250,8 @@ namespace Type
 		//比較テスト
 		TEST_FUNC(GraeterThan2)
 		{
-			Environ::Numeric<> i1(300);
-			Environ::Numeric<> i2(30);
+			Environ::Integer<> i1(300);
+			Environ::Integer<> i2(30);
 
 			Assert::AreEqual(i1 <= i2, false);
 		}
@@ -259,8 +259,8 @@ namespace Type
 		//比較テスト
 		TEST_FUNC(GraeterThan3)
 		{
-			Environ::Numeric<> i1(30);
-			Environ::Numeric<> i2(300);
+			Environ::Integer<> i1(30);
+			Environ::Integer<> i2(300);
 
 			Assert::AreEqual(i1 <= i2, true);
 		}
@@ -271,8 +271,8 @@ namespace Type
 		//比較テスト
 		TEST_FUNC(Less1)
 		{
-			Environ::Numeric<> i1(300);
-			Environ::Numeric<> i2(300);
+			Environ::Integer<> i1(300);
+			Environ::Integer<> i2(300);
 
 			Assert::AreEqual(i1 > i2, false);
 		}
@@ -280,8 +280,8 @@ namespace Type
 		//比較テスト
 		TEST_FUNC(Less2)
 		{
-			Environ::Numeric<> i1(300);
-			Environ::Numeric<> i2(30);
+			Environ::Integer<> i1(300);
+			Environ::Integer<> i2(30);
 
 			Assert::AreEqual(i1 > i2, true);
 		}
@@ -289,8 +289,8 @@ namespace Type
 		//比較テスト
 		TEST_FUNC(Less3)
 		{
-			Environ::Numeric<> i1(30);
-			Environ::Numeric<> i2(300);
+			Environ::Integer<> i1(30);
+			Environ::Integer<> i2(300);
 
 			Assert::AreEqual(i1 > i2, false);
 		}
@@ -298,8 +298,8 @@ namespace Type
 		//比較テスト
 		TEST_FUNC(LessThan1)
 		{
-			Environ::Numeric<> i1(300);
-			Environ::Numeric<> i2(300);
+			Environ::Integer<> i1(300);
+			Environ::Integer<> i2(300);
 
 			Assert::AreEqual(i1 >= i2, true);
 		}
@@ -307,8 +307,8 @@ namespace Type
 		//比較テスト
 		TEST_FUNC(LessThan2)
 		{
-			Environ::Numeric<> i1(300);
-			Environ::Numeric<> i2(30);
+			Environ::Integer<> i1(300);
+			Environ::Integer<> i2(30);
 
 			Assert::AreEqual(i1 >= i2, true);
 		}
@@ -316,8 +316,8 @@ namespace Type
 		//比較テスト
 		TEST_FUNC(LessThan3)
 		{
-			Environ::Numeric<> i1(30);
-			Environ::Numeric<> i2(300);
+			Environ::Integer<> i1(30);
+			Environ::Integer<> i2(300);
 
 			Assert::AreEqual(i1 >= i2, false);
 		}
@@ -326,10 +326,63 @@ namespace Type
 		//論理否定テスト
 		TEST_FUNC(NOT1)
 		{
-			Environ::Numeric<> i(30);
+			Environ::Integer<> i(30);
 			Assert::AreEqual<int>(~i, ~30);
 		}
 
+		//剰余テスト
+		TEST_FUNC(Reminder)
+		{
+			Environ::Integer<> i(30);
+			Environ::Integer<> i2(20);
+			Assert::AreEqual<int>(i%i2, 30%20);
+		}
+
+
+		//剰余テスト
+		TEST_FUNC(Reminder)
+		{
+			Environ::Integer<> i(30);
+			Environ::Integer<> i2(20);
+			i %= i2;
+			Assert::AreEqual<int>(i, 30 % 20);
+		}
+
+		//シフト演算テスト
+		TEST_FUNC(Reminder)
+		{
+			Environ::Integer<> i(30);
+			Environ::Integer<> i2(2);
+			i >>= i2;
+			Assert::AreEqual<int>(i, 30 >> 2);
+		}
+
+		//シフト演算テスト
+		TEST_FUNC(Reminder)
+		{
+			Environ::Integer<> i(30);
+			Environ::Integer<> i2(2);
+			i <<= i2;
+			Assert::AreEqual<int>(i, 30 << 2);
+		}
+
+		//シフト演算テスト
+		TEST_FUNC(Reminder)
+		{
+			Environ::Integer<> i(30);
+			Environ::Integer<> i2(2);
+
+			Assert::AreEqual<int>(i>>i2, 30 >> 2);
+		}
+
+		//シフト演算テスト
+		TEST_FUNC(Reminder)
+		{
+			Environ::Integer<> i(30);
+			Environ::Integer<> i2(2);
+
+			Assert::AreEqual<int>(i<<i2, 30 << 2);
+		}
 
 	};
 }
