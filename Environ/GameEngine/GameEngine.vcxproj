@@ -127,6 +127,7 @@
     <ClInclude Include="Header\System\CoreSystem.hpp" />
     <ClInclude Include="Header\System\EntryPoint.hpp" />
     <ClInclude Include="Header\Configure\Integration.hh" />
+    <ClInclude Include="Header\Type\Floating.hpp" />
     <ClInclude Include="Header\Type\Integer.hpp" />
     <ClInclude Include="Header\Type\Numeric.hpp" />
   </ItemGroup>

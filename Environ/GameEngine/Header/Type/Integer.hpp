@@ -22,53 +22,137 @@ namespace Environ {
 		Integer();
 		Integer(const T& aValue);
 
-		using Numeric<T>::operator=;
-
-		using Numeric<T>::operator+;
-		using Numeric<T>::operator-;
-		using Numeric<T>::operator*;
-		using Numeric<T>::operator/;
-
-		using Numeric<T>::operator+=;
-		using Numeric<T>::operator-=;
-		using Numeric<T>::operator*=;
-		using Numeric<T>::operator/=;
-
+		/**
+		@brief	数値を除算した際の剰余した結果を取得する
+		@param	(拡張)整数型
+		@return	演算後のインスタンス
+		*/
 		Integer<T> operator%(const T& aVal)const;
+		
+		/**
+		@brief	数値を除算した結果のあまりを代入する(Integer<>に移植する)
+		@param	(拡張)整数型
+		@return	演算後のインスタンス参照
+		*/
 		Integer<T>& operator%=(const T& aVal);
 
+
+		/**
+		@brief	数値を加算した結果を取得する
+		@param	(拡張)整数型
+		@return	演算後のインスタンス
+		*/
 		Integer<T> operator>>(const T& aVal)const noexcept;
+
+		/**
+		@brief	数値を加算した結果を取得する
+		@param	(拡張)整数型
+		@return	演算後のインスタンス
+		*/
 		Integer<T> operator<<(const T& aVal)const noexcept;
+		
+		/**
+		@brief	数値を右シフトした結果を代入する(Integer<>に移植する)
+		@param	(拡張)整数型
+		@return	演算後のインスタンス参照
+		*/
 		Integer<T>& operator>>=(const T& aVal)noexcept;
+
+		/**
+		@brief	数値を左シフトした結果を代入する(Integer<>に移植する)
+		@param	(拡張)整数型
+		@return	演算後のインスタンス参照
+		*/
 		Integer<T>& operator<<=(const T& aVal)noexcept;
 
 		Integer<T> operator~()const noexcept;
 
+
+		/**
+		@brief	二つの数値との論理積を取得する
+		@param	(拡張)整数型
+		@return	論理積の演算結果
+		*/
 		Integer<T> operator&(const T&aVal)const noexcept;
+
+		/**
+		@brief	二つの数値との排他的論理和を取得する
+		@param	(拡張)整数型
+		@return	排他的論理和の演算結果
+		*/
 		Integer<T> operator^(const T&aVal)const noexcept;
+
+		/**
+		@brief	二つの数値との論理和を取得する
+		@param	(拡張)整数型
+		@return	論理和の演算結果
+		*/
 		Integer<T> operator|(const T&aVal)const noexcept;
+
+		/**
+		@brief	数値との論理積を代入する
+		@param	(拡張)整数型
+		@return	演算後のインスタンス参照
+		*/
 		Integer<T> operator&=(const T&aVal)noexcept;
+
+		/**
+		@brief	数値との排他的論理和を代入する
+		@param	(拡張)整数型
+		@return	演算後のインスタンス参照
+		*/
 		Integer<T> operator^=(const T&aVal)noexcept;
+
+		/**
+		@brief	数値との論理和を代入する
+		@param	(拡張)整数型
+		@return	演算後のインスタンス参照
+		*/
 		Integer<T> operator|=(const T&aVal)noexcept;
 
+
+		/**
+		@brief	数値を1加算する
+		@param	(拡張)整数型
+		@return	加算後のインスタンスの参照
+		*/
 		Integer<T>& operator ++()noexcept;
+
+		/**
+		@brief	数値を1減算する
+		@param	(拡張)整数型
+		@return	減算後のインスタンスの参照
+		*/
 		Integer<T>& operator --()noexcept;
+
+		/**
+		@brief	数値を1加算する
+		@param	(拡張)整数型
+		@return	加算前のインスタンス
+		*/
 		Integer<T> operator ++(int)const noexcept;
+
+		/**
+		@brief	数値を1減算する
+		@param	(拡張)整数型
+		@return	加算前のインスタンス
+		*/
 		Integer<T> operator --(int)const noexcept;
 
-		static constexpr T MaxDigit = std::numeric_limits<T>::digits10);	/**< 10進数で表せる最大桁数 */ 
+		static constexpr T MaxDigit = (std::numeric_limits<T>::digits10);	/**< 10進数で表せる最大桁数 */ 
 
 	};
 
-	using SByte = Integer<int8_t>;
-	using Byte = Integer<uint8_t>;
-	using Short = Integer<int16_t>;
-	using UShort = Integer<uint16_t>;
-	using Int = Integer<int32_t>;
-	using Uint = Integer<uint32_t>;
-	using Long = Integer<int64_t>;
-	using ULong = Integer<uint64_t>;
 
 }
 
 #include"Integer.inl"
+
+using SByte = Environ::Integer<int8_t>;
+using Byte = Environ::Integer<uint8_t>;
+using Short = Environ::Integer<int16_t>;
+using UShort = Environ::Integer<uint16_t>;
+using Int = Environ::Integer<int32_t>;
+using Uint = Environ::Integer<uint32_t>;
+using Long = Environ::Integer<int64_t>;
+using ULong = Environ::Integer<uint64_t>;

@@ -51,6 +51,9 @@
     <ClInclude Include="Header\Type\Numeric.hpp">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="Header\Type\Floating.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Header\System\Window.hpp">
