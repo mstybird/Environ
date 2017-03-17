@@ -22,6 +22,7 @@ namespace Environ {
 	{
 	public:
 		Boolean();
+		Boolean(const bool aValue);
 		~Boolean();
 
 		operator bool()const;

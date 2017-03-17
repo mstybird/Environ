@@ -1,3 +1,4 @@
+#include "..\..\GameEngine\Header\Type\String.hpp"
 #include <Type\String.hpp>
 
 namespace Environ {
@@ -40,9 +41,14 @@ namespace Environ {
 		// TODO: return ステートメントをここに挿入します
 	}
 
-	String & String::operator==(const Object & aObject)
+	Boolean String::operator==(const Object & aObject)const
 	{
 		// TODO: return ステートメントをここに挿入します
+	}
+
+	Boolean String::operator!=(const Object & aObject)const
+	{
+		return Boolean();
 	}
 
 	Int String::Length() const
@@ -160,22 +166,22 @@ namespace Environ {
 		// TODO: return ステートメントをここに挿入します
 	}
 
-	Int String::Find(const Object &, const Between & aFindBetween)
+	Int String::Find(const Object &, const Between & aFindBetween)const
 	{
 		return Int();
 	}
 
-	Int String::Find(const Object &, const Int & aStartIndex)
+	Int String::Find(const Object &, const Int & aStartIndex)const
 	{
 		return Int();
 	}
 
-	Int String::FindBack(const Object &, const Int & aStartIndex)
+	Int String::FindBack(const Object &, const Int & aStartIndex)const
 	{
 		return Int();
 	}
 
-	bool String::Equal(const Object & aValue) const
+	Boolean String::Equal(const Object & aValue) const
 	{
 		return false;
 	}

@@ -31,8 +31,8 @@ namespace Environ {
 
 		String& operator+=(const Object& aObject);
 
-		Boolean operator==(const Object& aObject);
-		Boolean operator!=(const Object& aObject);
+		Boolean operator==(const Object& aObject)const;
+		Boolean operator!=(const Object& aObject)const;
 
 		Int Length()const;
 		Char At(const Int aIndex)const;
@@ -68,9 +68,9 @@ namespace Environ {
 		String& Replacing(const Between& aReplaceBetween, const Object& aObject);
 		String& Replacing(const Between& aReplaceBetween, const String&, const Between& aStringBetween);
 
-		Int Find(const Object&, const Between& aFindBetween);
-		Int Find(const Object&, const Int& aStartIndex);
-		Int FindBack(const Object&, const Int& aStartIndex);
+		Int Find(const Object&, const Between& aFindBetween)const;
+		Int Find(const Object&, const Int& aStartIndex)const;
+		Int FindBack(const Object&, const Int& aStartIndex)const;
 
 
 		virtual Boolean Equal(const Object& aValue)const override;
