@@ -121,23 +121,28 @@
     <ClInclude Include="Header\Configure\wxWidgetsLinkSetting.hpp" />
     <ClInclude Include="Header\Debug\Memory.hpp" />
     <ClInclude Include="Header\Configure\DLLSettings.hpp" />
+    <ClInclude Include="Header\InterFace\IEquateble.hpp" />
+    <ClInclude Include="Header\InterFace\IParseble.hpp" />
     <ClInclude Include="Header\PreCompiled\C++.hpp" />
     <ClInclude Include="Header\PreCompiled\C++11.hpp" />
     <ClInclude Include="Header\Rendering\LayerGUI.hpp" />
     <ClInclude Include="Header\System\CoreSystem.hpp" />
     <ClInclude Include="Header\System\EntryPoint.hpp" />
     <ClInclude Include="Header\Configure\Integration.hh" />
+    <ClInclude Include="Header\Type\BetweenValue.hpp" />
+    <ClInclude Include="Header\Type\Boolean.hpp" />
+    <ClInclude Include="Header\Type\Char.hpp" />
     <ClInclude Include="Header\Type\Floating.hpp" />
     <ClInclude Include="Header\Type\Integer.hpp" />
     <ClInclude Include="Header\Type\Numeric.hpp" />
+    <ClInclude Include="Header\Type\Object.hpp" />
+    <ClInclude Include="Header\Type\String.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Header\System\Window.hpp" />
     <ClCompile Include="Template\PreCompiled\Integration.cc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Header\Type\Integer.inl" />
-    <None Include="Header\Type\Numeric.inl" />
     <None Include="Readme.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -146,7 +146,6 @@ namespace Environ {
 
 }
 
-#include"Integer.inl"
 
 using SByte = Environ::Integer<int8_t>;
 using Byte = Environ::Integer<uint8_t>;

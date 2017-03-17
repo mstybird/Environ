@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26206.0
+VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameEngine", "GameEngine\GameEngine.vcxproj", "{B00EF9EF-6967-4724-8159-84D4CD191C42}"
 EndProject
@@ -19,6 +19,9 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "win10_Application", "win10_Application\win10_Application.vcxproj", "{5A872FB9-8C95-48C1-873E-B4B1A3165884}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{12E7F72F-84B8-4EBF-8735-FAB93FDFED63}"
+	ProjectSection(SolutionItems) = preProject
+		unchi.md = unchi.md
+	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SystemTest", "__TestProjects\mstybird\SystemTest\SystemTest.vcxproj", "{2A03568C-A53D-4522-9EC3-766A54AFB0F0}"
 EndProject
@@ -27,6 +30,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "win10_GUI", "win10_GUI\win10_GUI.vcxproj", "{8C865E23-B9D7-4E2B-A937-F9CDB76DEE0A}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTest", "__TestProjects\mstybird\UnitTest\UnitTest.vcxproj", "{00F3297B-E185-4622-96E5-AE5F7F7DA94D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Type", "Type\Type.vcxproj", "{ECA33366-52B1-4623-85D4-C7361CF3FB56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -84,6 +89,14 @@ Global
 		{00F3297B-E185-4622-96E5-AE5F7F7DA94D}.Release|x64.Build.0 = Release|x64
 		{00F3297B-E185-4622-96E5-AE5F7F7DA94D}.Release|x86.ActiveCfg = Release|Win32
 		{00F3297B-E185-4622-96E5-AE5F7F7DA94D}.Release|x86.Build.0 = Release|Win32
+		{ECA33366-52B1-4623-85D4-C7361CF3FB56}.Debug|x64.ActiveCfg = Debug|x64
+		{ECA33366-52B1-4623-85D4-C7361CF3FB56}.Debug|x64.Build.0 = Debug|x64
+		{ECA33366-52B1-4623-85D4-C7361CF3FB56}.Debug|x86.ActiveCfg = Debug|Win32
+		{ECA33366-52B1-4623-85D4-C7361CF3FB56}.Debug|x86.Build.0 = Debug|Win32
+		{ECA33366-52B1-4623-85D4-C7361CF3FB56}.Release|x64.ActiveCfg = Release|x64
+		{ECA33366-52B1-4623-85D4-C7361CF3FB56}.Release|x64.Build.0 = Release|x64
+		{ECA33366-52B1-4623-85D4-C7361CF3FB56}.Release|x86.ActiveCfg = Release|Win32
+		{ECA33366-52B1-4623-85D4-C7361CF3FB56}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

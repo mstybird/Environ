@@ -21,8 +21,28 @@
     <ClCompile Include="PreCompiled\Integration.cc">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Source\Integer.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\Boolean.cpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </None>
+    <None Include="Source\Char.cpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </None>
+    <None Include="Source\Floating.cpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </None>
+    <None Include="Source\Integer.cpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </None>
+    <None Include="Source\Numeric.cpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </None>
+    <None Include="Source\Object.cpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </None>
+    <None Include="Source\String.cpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </None>
   </ItemGroup>
 </Project>
