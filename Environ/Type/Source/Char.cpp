@@ -16,26 +16,33 @@ namespace Environ {
 	{
 		return mValue;
 	}
+
+	//文字代入処理
 	Char& Char::operator=(const char & aChara)
 	{
 		mValue=aChara;
 		return *this;
 	}
 
+	//文字比較処理
 	bool Char::operator==(const char & aChara)const
 	{
 		return mValue==aChara;
 	}
 
+	//文字比較処理
 	bool Char::operator==(const Char & aChara)const
 	{
 		return operator==(aChara.mValue);
 	}
+
+	//文字比較処理(否定)
 	bool Char::operator!=(const char & aChara)const
 	{
 		return mValue != aChara;
 	}
 
+	//文字比較処理(否定)
 	bool Char::operator!=(const Char & aChara)const
 	{
 		return operator!=(aChara.mValue);
@@ -52,14 +59,20 @@ namespace Environ {
 	{
 		return ::isspace(mValue) != 0;
 	}
+
+	//アルファベットかどうか
 	bool Char::IsAlpha()const
 	{
 		return ::isalpha(mValue) != 0;
 	}
+
+	//アルファベット大文字かどうか
 	bool Char::IsUpper()const
 	{
 		return ::isupper(mValue) != 0;
 	}
+
+	//アルファベット小文字かどうか
 	bool Char::IsLower()const
 	{
 		return ::islower(mValue) != 0;
@@ -72,26 +85,34 @@ namespace Environ {
 		return mValue == 0;
 	}
 
-	//小文字に変換
+	//アルファベットを小文字に変換
 	Char & Char::ToLower()
 	{
 		mValue = ::tolower(mValue);
 		return *this;
 	}
+
+	//アルファベットを大文字に変換
 	Char & Char::ToUpper()
 	{
 		mValue = ::toupper(mValue);
 		return *this;
 	}
+
+
+	//文字比較処理
 	bool Char::Equal(const char & aValue) const
 	{
 		return operator==(aValue);
 	}
 
+	//文字比較処理
 	bool Char::Equal(const Char & aValue) const
 	{
 		return operator==(aValue);
 	}
+
+	//文字列に変換する
 	String Char::ToString() const
 	{
 		return String(mValue);
