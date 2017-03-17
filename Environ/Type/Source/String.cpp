@@ -1,4 +1,5 @@
 #include "..\..\GameEngine\Header\Type\String.hpp"
+#include "..\..\GameEngine\Header\Type\String.hpp"
 #include <Type\String.hpp>
 
 namespace Environ {
@@ -11,8 +12,13 @@ namespace Environ {
 	{
 	}
 
+	String::String(const char aObject)
+	{
+	}
+
 	String::String(const char * aObject)
 	{
+		
 	}
 
 	String::String(const Object & aObject)
