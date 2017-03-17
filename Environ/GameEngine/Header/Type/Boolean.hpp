@@ -26,8 +26,8 @@ namespace Environ {
 
 		operator bool()const;
 
-		virtual bool Equal(const bool& aValue)const override;
-		virtual bool Equal(const Boolean& aValue)const override;
+		virtual Boolean Equal(const bool& aValue)const override;
+		virtual Boolean Equal(const Boolean& aValue)const override;
 	protected:
 	private:
 

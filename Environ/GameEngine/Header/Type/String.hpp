@@ -31,7 +31,8 @@ namespace Environ {
 
 		String& operator+=(const Object& aObject);
 
-		String& operator==(const Object& aObject);
+		Boolean operator==(const Object& aObject);
+		Boolean operator!=(const Object& aObject);
 
 		Int Length()const;
 		Char At(const Int aIndex)const;
@@ -72,7 +73,7 @@ namespace Environ {
 		Int FindBack(const Object&, const Int& aStartIndex);
 
 
-		virtual bool Equal(const Object& aValue)const override;
+		virtual Boolean Equal(const Object& aValue)const override;
 
 	protected:
 	private:

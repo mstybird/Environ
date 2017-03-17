@@ -20,6 +20,14 @@ namespace Environ {
 		~Between();
 
 		Int Diff()const;
+		Int GetStart();
+		Int GetEnd();
+		Int GetStep();
+
+		Between& SetStart(const Int& aStart);
+		Between& SetEnd(const Int& aEnd);
+		Between& SetStep(const Int& aStep);
+		Between& SetBetween(const Int& aStart,const Int& aEnd);
 
 	private:
 		Int mStart;

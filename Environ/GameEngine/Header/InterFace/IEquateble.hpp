@@ -21,7 +21,7 @@ namespace Environ {
 	public:
 		IEquateble();
 		virtual ~IEquateble();
-		virtual bool Equal(const T& aValue)const = 0;
+		virtual Boolean Equal(const T& aValue)const = 0;
 	protected:
 	private:
 	};
