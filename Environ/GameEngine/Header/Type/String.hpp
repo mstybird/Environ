@@ -15,7 +15,8 @@ namespace Environ {
 	*/
 	class String:
 		std::string,
-		public IEquateble<Object>
+		public IEquateble<Object>,
+		public Object
 	{
 	public:
 
@@ -75,13 +76,50 @@ namespace Environ {
 		*/
 		String& operator=(const Object& aObject);
 
+		/**
+		@brief 指定文字列を代入する
+		@param 文字列
+		@return このインスタンスの参照
+		*/
+		String& operator=(const char* aObject);
 
 		/**
-		@brief
-		@param
+		@brief 指定文字を代入する
+		@param 文字列
+		@return このインスタンスの参照
+		*/
+		String& operator=(const char aObject);
+
+
+		/**
+		@brief 末尾に文字列を追加する
+		@param	追加文字列オブジェクト
 		@return このインスタンスの参照
 		*/
 		String& operator+=(const Object& aObject);
+
+		/**
+		@brief 末尾に文字列を追加する
+		@param	追加文字列
+		@return このインスタンスの参照
+		*/
+		String& operator+=(const String& aObject);
+
+
+
+		/**
+		@brief 末尾に文字列を追加する
+		@param	追加文字列オブジェクト
+		@return このインスタンスの参照
+		*/
+		String& operator+=(const char* aObject);
+
+		/**
+		@brief 末尾に文字列を追加する
+		@param	追加文字列オブジェクト
+		@return このインスタンスの参照
+		*/
+		String& operator+=(const char aObject);
 
 
 		/**
@@ -94,9 +132,38 @@ namespace Environ {
 		/**
 		@brief	文字列を比較する
 		@param	比較用文字列
+		@return 完全一致すればtrue。それ以外はfalse
+		*/
+		Boolean operator==(const char* aObject)const;
+
+
+		/**
+		@brief	文字列を比較する
+		@param	比較用文字列
+		@return 完全一致すればtrue。それ以外はfalse
+		*/
+		Boolean operator==(const String& aObject)const;
+
+		/**
+		@brief	文字列を比較する
+		@param	比較用文字列
 		@return	完全一致しなければtrue。一致した場合はfalse
 		*/
 		Boolean operator!=(const Object& aObject)const;
+
+		/**
+		@brief	文字列を比較する
+		@param	比較用文字列
+		@return	完全一致しなければtrue。一致した場合はfalse
+		*/
+		Boolean operator!=(const char* aObject)const;
+
+		/**
+		@brief	文字列を比較する
+		@param	比較用文字列
+		@return	完全一致しなければtrue。一致した場合はfalse
+		*/
+		Boolean operator!=(const String& aObject)const;
 
 
 		/**
@@ -313,6 +380,14 @@ namespace Environ {
 		@return	完全一致すればtrourが返る。
 		*/
 		virtual Boolean Equal(const Object& aValue)const override;
+
+		/**
+		@brief	文字列を取得する※非推奨
+		@param	比較文字列
+		@return	完全一致すればtrourが返る。
+		*/
+		[[deplecated]]
+		virtual String ToString() const override;
 
 	protected:
 	private:
