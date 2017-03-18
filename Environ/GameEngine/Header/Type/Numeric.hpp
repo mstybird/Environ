@@ -12,6 +12,11 @@
 
 namespace Environ {
 
+	/**
+		@class Numeric
+		@brief ‘g‚İ‚İ”’lŒ^‚ª‘O’ñ‚È‚½‚ßA
+		TŒ^‚Ì’l‚ÍQÆ“n‚µ‚µ‚È‚¢(ˆÃ–ÙƒLƒƒƒXƒg‚ğ”F‚ß‚é‚½‚ß)
+	*/
 	template<typename T=int>
 	class Numeric {
 	public:
@@ -27,7 +32,7 @@ namespace Environ {
 			
 			@param 
 		*/
-		Numeric(const T& aValue);
+		Numeric(const T aValue);
 
 		/**
 			@brief ‰ğ•úˆ—
@@ -50,110 +55,32 @@ namespace Environ {
 			@param	(Šg’£)®”Œ^
 			@return	‰‰ZŒã‚ÌƒCƒ“ƒXƒ^ƒ“ƒXQÆ 
 		*/
-		Numeric<T>& operator=(const T& aVal);
+		Numeric<T>& operator=(const T aVal);
 
 		/**
 		@brief	”’l‚ğ‰ÁZ‚µ‚½Œ‹‰Ê‚ğ‘ã“ü‚·‚é
 		@param	(Šg’£)®”Œ^
 		@return	‰‰ZŒã‚ÌƒCƒ“ƒXƒ^ƒ“ƒXQÆ
 		*/
-		Numeric<T>& operator+=(const T& aVal);
+		Numeric<T>& operator+=(const T aVal);
 
 		/**
 		@brief	”’l‚ğŒ¸Z‚µ‚½Œ‹‰Ê‚ğ‘ã“ü‚·‚é
 		@param	(Šg’£)®”Œ^
 		@return	‰‰ZŒã‚ÌƒCƒ“ƒXƒ^ƒ“ƒXQÆ
 		*/
-		Numeric<T>& operator-=(const T& aVal);
-
-		/**
-		@brief	”’l‚ğæZ‚µ‚½Œ‹‰Ê‚ğ‘ã“ü‚·‚é
-		@param	(Šg’£)®”Œ^
-		@return	‰‰ZŒã‚ÌƒCƒ“ƒXƒ^ƒ“ƒXQÆ
-		*/
-		Numeric<T>& operator*=(const T& aVal);
+		Numeric<T>& operator-=(const T aVal);
 
 		/**
 		@brief	”’l‚ğœZ‚µ‚½Œ‹‰Ê‚ğ‘ã“ü‚·‚é
 		@param	(Šg’£)®”Œ^
 		@return	‰‰ZŒã‚ÌƒCƒ“ƒXƒ^ƒ“ƒXQÆ
 		*/
-		Numeric<T>& operator/=(const T& aVal);
+		Numeric<T>& operator/=(const T aVal);
 
 
-		//‰‰Z
 
-		/**
-		@brief	”’l‚ğ‰ÁZ‚µ‚½Œ‹‰Ê‚ğæ“¾‚·‚é
-		@param	(Šg’£)®”Œ^
-		@return	‰‰ZŒã‚ÌƒCƒ“ƒXƒ^ƒ“ƒX
-		*/
-		Numeric<T> operator+(const T& aVal)const;
 
-		/**
-		@brief	”’l‚ğŒ¸Z‚µ‚½Œ‹‰Ê‚ğæ“¾‚·‚é
-		@param	(Šg’£)®”Œ^
-		@return	‰‰ZŒã‚ÌƒCƒ“ƒXƒ^ƒ“ƒX
-		*/
-		Numeric<T> operator-(const T& aVal)const;
-
-		/**
-		@brief	”’l‚ğæZ‚µ‚½Œ‹‰Ê‚ğæ“¾‚·‚é
-		@param	(Šg’£)®”Œ^
-		@return	‰‰ZŒã‚ÌƒCƒ“ƒXƒ^ƒ“ƒX
-		*/
-		Numeric<T> operator*(const T& aVal)const;
-
-		/**
-		@brief	”’l‚ğœZ‚µ‚½Œ‹‰Ê‚ğæ“¾‚·‚é
-		@param	(Šg’£)®”Œ^
-		@return	‰‰ZŒã‚ÌƒCƒ“ƒXƒ^ƒ“ƒX
-		*/
-		Numeric<T> operator/(const T& aVal)const;
-
-		//”äŠr
-
-		/**
-		@brief	”’l‚ğ”äŠr‚µ‚Ä“™‚µ‚¯‚ê‚Îtrue‚ğ•Ô‚·
-		@param	(Šg’£)®”Œ^
-		@return	”äŠr®‚ª¬‚è—§‚Ä‚Îtrue‚ğ•Ô‚·
-		*/
-		bool operator==(const T& aVal)const;
-
-		/**
-		@brief	”’l‚ğ”äŠr‚µ‚Ä“™‚µ‚­‚È‚¯‚ê‚Îtrue‚ğ•Ô‚·
-		@param	(Šg’£)®”Œ^
-		@return	”äŠr®‚ª¬‚è—§‚Ä‚Îtrue‚ğ•Ô‚·
-		*/
-		bool operator!=(const T& aVal)const;
-
-		/**
-		@brief	”’l‚ğ”äŠr‚µ‚Ä®‚ª¬‚è—§‚Ä‚Îtrue‚ğ•Ô‚·
-		@param	(Šg’£)®”Œ^
-		@return	”äŠr®‚ª¬‚è—§‚Ä‚Îtrue‚ğ•Ô‚·
-		*/
-		bool operator<(const T& aVal)const;
-
-		/**
-		@brief	”’l‚ğ”äŠr‚µ‚Ä®‚ª¬‚è—§‚Ä‚Îtrue‚ğ•Ô‚·
-		@param	(Šg’£)®”Œ^
-		@return	”äŠr®‚ª¬‚è—§‚Ä‚Îtrue‚ğ•Ô‚·
-		*/
-		bool operator<=(const T& aVal)const;
-
-		/**
-		@brief	”’l‚ğ”äŠr‚µ‚Ä®‚ª¬‚è—§‚Ä‚Îtrue‚ğ•Ô‚·
-		@param	(Šg’£)®”Œ^
-		@return	”äŠr®‚ª¬‚è—§‚Ä‚Îtrue‚ğ•Ô‚·
-		*/
-		bool operator>(const T& aVal)const;
-
-		/**
-		@brief	”’l‚ğ”äŠr‚µ‚Ä®‚ª¬‚è—§‚Ä‚Îtrue‚ğ•Ô‚·
-		@param	(Šg’£)®”Œ^
-		@return	”äŠr®‚ª¬‚è—§‚Ä‚Îtrue‚ğ•Ô‚·
-		*/
-		bool operator>=(const T& aVal)const;
 
 		static constexpr T min = (std::numeric_limits<T>::min)(); /**< Œ^‚ª•\‚·Å¬” */
 		static constexpr T max = (std::numeric_limits<T>::max)(); /**< Œ^‚ª•\‚·Å‘å” */

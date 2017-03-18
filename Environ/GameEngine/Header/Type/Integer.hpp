@@ -20,95 +20,56 @@ namespace Environ {
 	class Integer :public Numeric<T>{
 	public:
 		Integer();
-		Integer(const T& aValue);
+		Integer(const T aValue);
 
-		/**
-		@brief	数値を除算した際の剰余した結果を取得する
-		@param	(拡張)整数型
-		@return	演算後のインスタンス
-		*/
-		Integer<T> operator%(const T& aVal)const;
-		
+
 		/**
 		@brief	数値を除算した結果のあまりを代入する(Integer<>に移植する)
 		@param	(拡張)整数型
 		@return	演算後のインスタンス参照
 		*/
-		Integer<T>& operator%=(const T& aVal);
+		Integer<T>& operator%=(const T aVal);
 
 
-		/**
-		@brief	数値を加算した結果を取得する
-		@param	(拡張)整数型
-		@return	演算後のインスタンス
-		*/
-		Integer<T> operator>>(const T& aVal)const noexcept;
 
-		/**
-		@brief	数値を加算した結果を取得する
-		@param	(拡張)整数型
-		@return	演算後のインスタンス
-		*/
-		Integer<T> operator<<(const T& aVal)const noexcept;
-		
 		/**
 		@brief	数値を右シフトした結果を代入する(Integer<>に移植する)
 		@param	(拡張)整数型
 		@return	演算後のインスタンス参照
 		*/
-		Integer<T>& operator>>=(const T& aVal)noexcept;
+		Integer<T>& operator>>=(const T aVal)noexcept;
 
 		/**
 		@brief	数値を左シフトした結果を代入する(Integer<>に移植する)
 		@param	(拡張)整数型
 		@return	演算後のインスタンス参照
 		*/
-		Integer<T>& operator<<=(const T& aVal)noexcept;
+		Integer<T>& operator<<=(const T aVal)noexcept;
 
 		Integer<T> operator~()const noexcept;
 
 
-		/**
-		@brief	二つの数値との論理積を取得する
-		@param	(拡張)整数型
-		@return	論理積の演算結果
-		*/
-		Integer<T> operator&(const T&aVal)const noexcept;
-
-		/**
-		@brief	二つの数値との排他的論理和を取得する
-		@param	(拡張)整数型
-		@return	排他的論理和の演算結果
-		*/
-		Integer<T> operator^(const T&aVal)const noexcept;
-
-		/**
-		@brief	二つの数値との論理和を取得する
-		@param	(拡張)整数型
-		@return	論理和の演算結果
-		*/
-		Integer<T> operator|(const T&aVal)const noexcept;
 
 		/**
 		@brief	数値との論理積を代入する
 		@param	(拡張)整数型
 		@return	演算後のインスタンス参照
 		*/
-		Integer<T> operator&=(const T&aVal)noexcept;
+		Integer<T> operator&=(const T aVal)noexcept;
 
 		/**
 		@brief	数値との排他的論理和を代入する
 		@param	(拡張)整数型
 		@return	演算後のインスタンス参照
 		*/
-		Integer<T> operator^=(const T&aVal)noexcept;
+		Integer<T> operator^=(const T aVal)noexcept;
 
 		/**
 		@brief	数値との論理和を代入する
 		@param	(拡張)整数型
 		@return	演算後のインスタンス参照
 		*/
-		Integer<T> operator|=(const T&aVal)noexcept;
+		Integer<T> operator|=(const T aVal)noexcept;
 
 
 		/**
