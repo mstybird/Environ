@@ -17,23 +17,23 @@ namespace Environ {
 		Char(const char aChara);
 		operator char()const;
 		Char& operator=(const char& aChara);
-		Boolean operator==(const char& aChara)const;
-		Boolean operator==(const Char& aChara)const;
-		Boolean operator!=(const char& aChara)const;
-		Boolean operator!=(const Char& aChara)const;
+		bool operator==(const char& aChara)const; 
+		bool operator==(const Char& aChara)const;
+		bool operator!=(const char& aChara)const;
+		bool operator!=(const Char& aChara)const;
 
-		Boolean IsDigit()const;
-		Boolean IsSpace()const;
-		Boolean IsAlpha()const;
-		Boolean IsUpper()const;
-		Boolean IsLower()const;
-		Boolean IsNull()const;
+		bool IsDigit()const;
+		bool IsSpace()const;
+		bool IsAlpha()const;
+		bool IsUpper()const;
+		bool IsLower()const;
+		bool IsNull()const;
 		Char& ToLower();
 		Char& ToUpper();
 
 
-		virtual Boolean Equal(const char& aValue)const override;
-		virtual Boolean Equal(const Char& aValue)const override;
+		virtual bool Equal(const char& aValue)const override;
+		virtual bool Equal(const Char& aValue)const override;
 
 
 		virtual String ToString() const override;
