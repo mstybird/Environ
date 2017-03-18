@@ -47,14 +47,14 @@ namespace Environ {
 		// TODO: return ステートメントをここに挿入します
 	}
 
-	bool String::operator==(const Object & aObject)const
+	Boolean String::operator==(const Object & aObject)const
 	{
 		// TODO: return ステートメントをここに挿入します
 	}
 
-	bool String::operator!=(const Object & aObject)const
+	Boolean String::operator!=(const Object & aObject)const
 	{
-		return bool();
+		return Boolean();
 	}
 
 	Int String::Length() const
@@ -87,24 +87,24 @@ namespace Environ {
 		// TODO: return ステートメントをここに挿入します
 	}
 
-	bool String::IsDigits() const
+	Boolean String::IsDigits() const
 	{
-		return bool();
+		return Boolean();
 	}
 
-	bool String::IsAlpha() const
+	Boolean String::IsAlpha() const
 	{
-		return bool();
+		return Boolean();
 	}
 
-	bool String::IsUpper() const
+	Boolean String::IsUpper() const
 	{
-		return bool();
+		return Boolean();
 	}
 
-	bool String::IsLower() const
+	Boolean String::IsLower() const
 	{
-		return bool();
+		return Boolean();
 	}
 
 	String & String::Uppering()
@@ -187,7 +187,7 @@ namespace Environ {
 		return Int();
 	}
 
-	bool String::Equal(const Object & aValue) const
+	Boolean String::Equal(const Object & aValue) const
 	{
 		return false;
 	}

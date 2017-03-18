@@ -25,61 +25,61 @@ namespace Environ {
 	}
 
 	//文字比較処理
-	bool Char::operator==(const char & aChara)const
+	Boolean Char::operator==(const char & aChara)const
 	{
 		return mValue==aChara;
 	}
 
 	//文字比較処理
-	bool Char::operator==(const Char & aChara)const
+	Boolean Char::operator==(const Char & aChara)const
 	{
 		return operator==(aChara.mValue);
 	}
 
 	//文字比較処理(否定)
-	bool Char::operator!=(const char & aChara)const
+	Boolean Char::operator!=(const char & aChara)const
 	{
 		return mValue != aChara;
 	}
 
 	//文字比較処理(否定)
-	bool Char::operator!=(const Char & aChara)const
+	Boolean Char::operator!=(const Char & aChara)const
 	{
 		return operator!=(aChara.mValue);
 	}
 
 	//数値かどうか
-	bool Char::IsDigit()const
+	Boolean Char::IsDigit()const
 	{
 		return ::isdigit(mValue) != 0;
 	}
 
 	//空白文字かどうか
-	bool Char::IsSpace()const
+	Boolean Char::IsSpace()const
 	{
 		return ::isspace(mValue) != 0;
 	}
 
 	//アルファベットかどうか
-	bool Char::IsAlpha()const
+	Boolean Char::IsAlpha()const
 	{
 		return ::isalpha(mValue) != 0;
 	}
 
 	//アルファベット大文字かどうか
-	bool Char::IsUpper()const
+	Boolean Char::IsUpper()const
 	{
 		return ::isupper(mValue) != 0;
 	}
 
 	//アルファベット小文字かどうか
-	bool Char::IsLower()const
+	Boolean Char::IsLower()const
 	{
 		return ::islower(mValue) != 0;
 	}
 
 	//null文字(0)かどうか調べる
-	bool Char::IsNull()const
+	Boolean Char::IsNull()const
 	{
 		
 		return mValue == 0;
@@ -101,13 +101,13 @@ namespace Environ {
 
 
 	//文字比較処理
-	bool Char::Equal(const char & aValue) const
+	Boolean Char::Equal(const char & aValue) const
 	{
 		return operator==(aValue);
 	}
 
 	//文字比較処理
-	bool Char::Equal(const Char & aValue) const
+	Boolean Char::Equal(const Char & aValue) const
 	{
 		return operator==(aValue);
 	}
