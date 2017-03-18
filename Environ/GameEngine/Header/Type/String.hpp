@@ -4,7 +4,7 @@
 #include "Integer.hpp"
 #include "InterFace\IEquateble.hpp"
 #include "BetweenValue.hpp"
-#include "Boolean.hpp"
+#include "bool.hpp"
 
 #include<string>
 
@@ -89,14 +89,14 @@ namespace Environ {
 		@param	比較用文字列
 		@return 完全一致すればtrue。それ以外はfalse
 		*/
-		Boolean operator==(const Object& aObject)const;
+		bool operator==(const Object& aObject)const;
 
 		/**
 		@brief	文字列を比較する
 		@param	比較用文字列
 		@return	完全一致しなければtrue。一致した場合はfalse
 		*/
-		Boolean operator!=(const Object& aObject)const;
+		bool operator!=(const Object& aObject)const;
 
 
 		/**
@@ -150,25 +150,25 @@ namespace Environ {
 		@brief	文字列が数字のみで構成されているか調べる
 		@return	数字のみだった場合はtrueを返す
 		*/
-		Boolean IsDigits()const;
+		bool IsDigits()const;
 
 		/**
 		@brief	文字列が半角アルファベットのみで構成されているか調べる
 		@return	半角アルファベットのみだった場合はtrueを返す
 		*/
-		Boolean IsAlpha()const;
+		bool IsAlpha()const;
 
 		/**
 		@brief	文字列が半角アルファベットの大文字のみで構成されているか調べる
 		@return	半角アルファベットの大文字のみだった場合trueを返す
 		*/
-		Boolean IsUpper()const;
+		bool IsUpper()const;
 
 		/**
 		@brief	文字列が半角アルファベットの小文字のみで構成されているか調べる
 		@return	半角アルファベットの小文字のみだった場合trueを返す
 		*/
-		Boolean IsLower()const;
+		bool IsLower()const;
 
 
 		/**
@@ -312,7 +312,7 @@ namespace Environ {
 		@param	比較文字列
 		@return	完全一致すればtrourが返る。
 		*/
-		virtual Boolean Equal(const Object& aValue)const override;
+		virtual bool Equal(const Object& aValue)const override;
 
 	protected:
 	private:
