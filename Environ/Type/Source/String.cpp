@@ -5,34 +5,39 @@
 namespace Environ {
 
 	//空文字列で初期化
-	String::String()
+	String::String():std::string("")
 	{
 	}
 
 	//キャパシティを指定してから文字列で初期化する
-	String::String(const Int aCapacity)
+	String::String(const Int aCapacity):std::string("")
 	{
+
+		if (aCapacity > 0)std::string::reserve(aCapacity);
 	}
 
 	//文字で初期化する
 	String::String(const char aObject)
 	{
+		//charで初期化できるコンストラクタがなかったのでoperator==で代用
+		std::string::operator =(aObject);
 	}
 
 	//const char*文字列で初期化する
-	String::String(const char * aObject)
+	String::String(const char * aObject):std::string(aObject)
 	{
 		
 	}
 
 	//オブジェクトで初期化する
-	String::String(const Object & aObject)
+	String::String(const Object & aObject):std::string(aObject.ToString())
 	{
 	}
 
 	//オブジェクトで初期化し、キャパシティを設定する
-	String::String(const Object & aObject, const Int aCapacity)
+	String::String(const Object & aObject, const Int aCapacity): std::string(aObject.ToString())
 	{
+		if (aCapacity > 0)std::string::reserve(aCapacity);
 	}
 
 	//特になし
@@ -43,97 +48,111 @@ namespace Environ {
 	//const char*文字列ポインタを返す
 	String::operator const char*()
 	{
+		return std::string::c_str();
 	}
 
 
 	//オブジェクトを代入する
 	String & String::operator=(const Object & aObject)
 	{
-		// TODO: return ステートメントをここに挿入します
+		std::string::operator =(aObject.ToString());
+		return *this;
 	}
 
 	//文字を代入する
 	String& String::operator=(const char aObject)
 	{
+		std::string::operator =(aObject);
+		return *this;
 
 	}
 
 	//文字列を代入する
 	String& String::operator=(const char* aObject)
 	{
+		std::string::operator =(aObject);
+		return *this;
 
 	}
 
 	//文字列を末尾に追加する
 	String & String::operator+=(const Object & aObject)
 	{
-		// TODO: return ステートメントをここに挿入します
+		std::string::operator +=(aObject.ToString());
+		return *this;
 	}
 
 	//文字列を末尾に追加する
 	String& String::operator+=(const char aObject)
 	{
+		std::string::operator +=(aObject);
+		return *this;
 
 	}
 
 	//文字列を末尾に追加する
 	String& String::operator+=(const char* aObject)
 	{
-
+		std::string::operator +=(aObject);
+		return *this;
 	}
 
 	//文字列を末尾に追加する
 	String& String::operator+=(const String& aObject)
 	{
-
+		std::string::operator +=(aObject);
+		return *this;
 	}
 
 	//文字列が等しいか比較する
 	Boolean String::operator==(const Object & aObject)const
 	{
-		// TODO: return ステートメントをここに挿入します
+		return std::string::compare(aObject.ToString()) == 0;
 	}
 
 	//文字列が等しいか比較する
 	Boolean String::operator==(const char* aObject) const
 	{
-
+		return std::string::compare(aObject) == 0;
 	}
 
 	//文字列が等しいか比較する
 	Boolean String::operator==(const String& aObject) const
 	{
-
+		return std::string::compare(aObject) == 0;
 	}
 
 	//文字列が等しくないか比較する
 	Boolean String::operator!=(const Object & aObject)const
 	{
-		return Boolean();
+		return std::string::compare(aObject.ToString()) != 0;
 	}
 
 
 	//文字列が等しくないか比較する
 	Boolean String::operator!=(const char* aObject) const
 	{
-
+		return std::string::compare(aObject) != 0;
 	}
 
 	//文字列が等しくないか比較する
 	Boolean String::operator!=(const String& aObject) const
 	{
-
+		return std::string::compare(aObject) != 0;
 	}
 
 	//現在の有効な文字列の長さを返す
 	Int String::Length() const
 	{
-		return Int();
+		return std::string::size();
 	}
 
 	//指定した位置の文字を取得する
 	Char String::At(const Int aIndex) const
 	{
+		if (aIndex >= 0 && aIndex < std::string::size())return std::string::at(aIndex);
+
+		//範囲外を指定した場合は\0を返す
 		return Char();
 	}
 

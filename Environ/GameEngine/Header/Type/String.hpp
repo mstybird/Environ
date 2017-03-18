@@ -68,7 +68,6 @@ namespace Environ {
 		*/
 		operator const char*();
 
-
 		/**
 		@brief Žw’è•¶Žš—ñ‚ð‘ã“ü‚·‚é
 		@param •¶Žš—ñ
