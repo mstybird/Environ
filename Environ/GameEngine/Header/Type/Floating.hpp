@@ -18,6 +18,7 @@ namespace Environ {
 
 		Floating();
 		Floating(const T aValue);
+		~Floating();
 
 		static constexpr T RoundError = std::numeric_limits<T>::round_error();//丸め誤差用
 		static constexpr T Epsilon = std::numeric_limits<T>::epsilon();//誤差検知用(浮動少数専用

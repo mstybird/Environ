@@ -17,7 +17,7 @@ namespace Environ {
 		@brief 組み込み数値型が前提なため、
 		T型の値は参照渡ししない(暗黙キャストを認めるため)
 	*/
-	template<typename T=int>
+	template<typename T>
 	class Numeric {
 	public:
 		/**
@@ -25,6 +25,7 @@ namespace Environ {
 
 		@param
 		*/
+
 		Numeric();
 
 		/**
@@ -72,6 +73,13 @@ namespace Environ {
 		Numeric<T>& operator-=(const T aVal);
 
 		/**
+		@brief	数値を乗算した結果を代入する
+		@param	(拡張)整数型
+		@return	演算後のインスタンス参照
+		*/
+		Numeric<T>& operator*=(const T aVal);
+
+		/**
 		@brief	数値を除算した結果を代入する
 		@param	(拡張)整数型
 		@return	演算後のインスタンス参照
@@ -90,6 +98,7 @@ namespace Environ {
 		T mValue; /**< 数値データ */
 		
 	}; 
+
 }
 
 

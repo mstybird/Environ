@@ -105,5 +105,6 @@ namespace Environ {
 		mStart = aStart;
 		mEnd = aEnd;
 		mStep = aStep;
+		return *this;
 	}
 }

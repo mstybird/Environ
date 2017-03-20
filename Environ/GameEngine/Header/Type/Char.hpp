@@ -1,6 +1,7 @@
 #pragma once
 #include"InterFace/IEquateble.hpp"
 #include "Object.hpp"
+
 namespace Environ {
 	/**
 		@class Char
@@ -9,8 +10,8 @@ namespace Environ {
 	*/
 	class Char :
 		public Object,
-		public IEquateble<char>,
-		public IEquateble<Char>
+		public IEquateble<char>
+		//public IEquateble<Char>
 	{
 	public:
 		Char();
@@ -33,10 +34,10 @@ namespace Environ {
 
 
 		virtual Boolean Equal(const char& aValue)const override;
-		virtual Boolean Equal(const Char& aValue)const override;
+		//virtual Boolean Equal(const Char& aValue)const override;
 
 
-		virtual String ToString() const override;
+		//virtual String ToString() const override;
 
 	private:
 		char mValue;

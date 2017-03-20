@@ -1,5 +1,6 @@
 #pragma once
 #include "Object.hpp"
+#include"Integer.hpp"
 /**
 	@file BetweenValue.hpp
 	@date Create for 2017/03/14 17:10

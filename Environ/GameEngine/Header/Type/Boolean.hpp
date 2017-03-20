@@ -1,6 +1,7 @@
 #pragma once
-#include "Object.hpp"
 #include "InterFace\IEquateble.hpp"
+#include "Object.hpp"
+//#include"String.hpp"
 /**
 	@file Boolean.hpp
 	@date Create for 2017/03/14 16:07
@@ -15,6 +16,9 @@ namespace Environ {
 		@class Boolean
 		@brief boolå^ägí£ÉNÉâÉX
 	*/
+
+
+
 	class Boolean:
 		public Object,
 		public IEquateble<bool>,
@@ -22,13 +26,14 @@ namespace Environ {
 	{
 	public:
 		Boolean();
-		Boolean(const bool aValue);
+		Boolean(const bool aValue) {}
 		~Boolean();
 
 		operator bool()const;
+		operator const bool&()const;
 
-		virtual Boolean Equal(const bool& aValue)const override;
-		virtual Boolean Equal(const Boolean& aValue)const override;
+		virtual Boolean Equal(const bool& aValue)const override {}
+		virtual Boolean Equal(const Boolean& aValue)const override {}
 	protected:
 	private:
 

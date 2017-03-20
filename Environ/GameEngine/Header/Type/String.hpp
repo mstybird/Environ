@@ -1,15 +1,17 @@
 #pragma once
 
+#include "InterFace\IEquateble.hpp"
+#include"Object.hpp"
 #include "Char.hpp"
 #include "Integer.hpp"
-#include "InterFace\IEquateble.hpp"
-#include "BetweenValue.hpp"
-#include "Boolean.hpp"
 
 #include<string>
-#include <vector>
 
 namespace Environ {
+
+	class Char;
+	class Between;
+	class Boolean;
 	/**
 		@class String
 		@brief std::Stringの拡張
@@ -417,7 +419,7 @@ namespace Environ {
 		@param	置き換える文字列
 		@return このインスタンスの参照
 		*/
-		String& Replacing(const Between& aReplaceBetween, const Object& aObject);
+		String& Replacing(const Between& aReplaceBetween, const String& aObject);
 
 		/**
 		@brief	指定した範囲を別の文字列で置き換える
@@ -426,7 +428,7 @@ namespace Environ {
 		@param	置き換える文字列の範囲
 		@return このインスタンスの参照
 		*/
-		String& Replacing(const Between& aReplaceBetween, const Object&, const Between& aStringBetween);
+		String& Replacing(const Between& aReplaceBetween, const String&, const Between& aStringBetween);
 
 		/**
 		@brief	文字列を検索する
@@ -534,7 +536,7 @@ namespace Environ {
 		@param	比較文字列
 		@return	完全一致すればtrourが返る。
 		*/
-		[[deplecated]]
+		[[deprecated]]
 		virtual String ToString() const override;
 
 	protected:

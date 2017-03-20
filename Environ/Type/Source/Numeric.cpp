@@ -1,5 +1,9 @@
 #include<Type/Numeric.hpp>
+
+#include<cstdint>
 namespace Environ {
+
+
 
 	//0‰Šú‰»
 	template<typename T>
@@ -42,6 +46,13 @@ namespace Environ {
 
 	}
 
+	template<typename T>
+	Numeric<T>& Numeric<T>::operator*=(const T aVal)
+	{
+		mValue *= aVal;
+		return *this;
+	}
+
 
 
 	//”’l‚ğœZ‚µ‚½Œ‹‰Ê‚ğ‘ã“ü‚·‚é
@@ -53,3 +64,5 @@ namespace Environ {
 	}
 
 }
+
+template class Environ::Numeric<int>;

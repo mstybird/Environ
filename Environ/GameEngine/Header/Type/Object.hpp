@@ -7,7 +7,7 @@
 
 	@brief 組み込み型拡張クラス以外のすべてのクラスが持つ基底オブジェクト
 */
-
+//#include"String.hpp"
 namespace Environ {
 	class String;
 	class Object {

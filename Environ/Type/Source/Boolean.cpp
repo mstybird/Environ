@@ -1,3 +1,6 @@
+#include "..\..\GameEngine\Header\Type\Boolean.hpp"
+#include "..\..\GameEngine\Header\Type\Boolean.hpp"
+#include "..\..\GameEngine\Header\Type\Boolean.hpp"
 #include <Type/Boolean.hpp>
 #include <Type/String.hpp>
 
@@ -10,15 +13,18 @@ namespace Environ {
 	}
 	Boolean::operator bool() const
 	{
+		return mValue;
 	}
-	bool Boolean::Equal(const bool & aValue) const
+	Boolean::operator const bool&() const
 	{
-		return false;
+		return mValue;
 	}
-	bool Boolean::Equal(const Boolean & aValue) const
+	Boolean::operator const bool() const
 	{
-		return false;
+		return mValue;
 	}
+
+
 	String Boolean::ToString() const
 	{
 		return String();

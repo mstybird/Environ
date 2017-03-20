@@ -14,3 +14,7 @@
 #include<Configure/Integration.hh>
 #include<Type/Numeric.hpp>
 #include<Type/Integer.hpp>
+#include<Type/Char.hpp>
+#include<Type/Boolean.hpp>
+#include<Type/BetweenValue.hpp>
+
