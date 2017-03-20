@@ -463,6 +463,7 @@ namespace Environ {
 		return *this;
 	}
 
+	//•¶š—ñ‚ğŒŸõ‚·‚é
 	Int String::Find(const Object & aObject) const
 	{
 		return std::string::find(aObject.ToString());
