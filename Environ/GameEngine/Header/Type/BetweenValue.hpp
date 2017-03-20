@@ -7,6 +7,7 @@
 	@author msty
 
 	@brief 主に2つの値の間の数値を扱うクラス
+	インライン実装
 */
 
 namespace Environ {
@@ -20,14 +21,14 @@ namespace Environ {
 		~Between();
 
 		Int Diff()const;
-		Int GetStart();
-		Int GetEnd();
-		Int GetStep();
+		Int GetStart()const;
+		Int GetEnd()const;
+		Int GetStep()const;
 
 		Between& SetStart(const Int& aStart);
 		Between& SetEnd(const Int& aEnd);
 		Between& SetStep(const Int& aStep);
-		Between& SetBetween(const Int& aStart,const Int& aEnd);
+		Between& SetBetween(const Int& aStart,const Int& aEnd, const Int& aStep);
 
 	private:
 		Int mStart;
@@ -35,3 +36,5 @@ namespace Environ {
 		Int mStep;
 	};
 }
+
+#include"BetweenValue.inl"

@@ -143,6 +143,7 @@
     <ClCompile Include="Template\PreCompiled\Integration.cc" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Header\Type\BetweenValue.inl" />
     <None Include="Readme.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
