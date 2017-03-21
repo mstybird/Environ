@@ -142,15 +142,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Source\Boolean.cpp" />
-    <None Include="Source\Char.cpp" />
-    <None Include="Source\Floating.cpp" />
-    <None Include="Source\Integer.cpp" />
-    <None Include="Source\Numeric.cpp" />
-    <None Include="Source\Object.cpp" />
-    <None Include="Source\String.cpp" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -167,9 +167,6 @@
     <ClCompile Include="Source\main.cc" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Type\Type.vcxproj">
-      <Project>{eca33366-52b1-4623-85d4-c7361cf3fb56}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\..\..\win10_Application\win10_Application.vcxproj">
       <Project>{5a872fb9-8c95-48c1-873e-b4b1a3165884}</Project>
     </ProjectReference>

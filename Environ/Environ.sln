@@ -31,8 +31,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "win10_GUI", "win10_GUI\win1
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UnitTest", "__TestProjects\mstybird\UnitTest\UnitTest.vcxproj", "{00F3297B-E185-4622-96E5-AE5F7F7DA94D}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Type", "Type\Type.vcxproj", "{ECA33366-52B1-4623-85D4-C7361CF3FB56}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -89,14 +87,6 @@ Global
 		{00F3297B-E185-4622-96E5-AE5F7F7DA94D}.Release|x64.Build.0 = Release|x64
 		{00F3297B-E185-4622-96E5-AE5F7F7DA94D}.Release|x86.ActiveCfg = Release|Win32
 		{00F3297B-E185-4622-96E5-AE5F7F7DA94D}.Release|x86.Build.0 = Release|Win32
-		{ECA33366-52B1-4623-85D4-C7361CF3FB56}.Debug|x64.ActiveCfg = Debug|x64
-		{ECA33366-52B1-4623-85D4-C7361CF3FB56}.Debug|x64.Build.0 = Debug|x64
-		{ECA33366-52B1-4623-85D4-C7361CF3FB56}.Debug|x86.ActiveCfg = Debug|Win32
-		{ECA33366-52B1-4623-85D4-C7361CF3FB56}.Debug|x86.Build.0 = Debug|Win32
-		{ECA33366-52B1-4623-85D4-C7361CF3FB56}.Release|x64.ActiveCfg = Release|x64
-		{ECA33366-52B1-4623-85D4-C7361CF3FB56}.Release|x64.Build.0 = Release|x64
-		{ECA33366-52B1-4623-85D4-C7361CF3FB56}.Release|x86.ActiveCfg = Release|Win32
-		{ECA33366-52B1-4623-85D4-C7361CF3FB56}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

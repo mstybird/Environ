@@ -169,11 +169,6 @@
     </ClCompile>
     <ClCompile Include="unittest1.cpp" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Type\Type.vcxproj">
-      <Project>{eca33366-52b1-4623-85d4-c7361cf3fb56}</Project>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
