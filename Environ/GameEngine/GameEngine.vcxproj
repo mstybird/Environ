@@ -137,6 +137,7 @@
     <ClInclude Include="Header\Type\Numeric.hpp" />
     <ClInclude Include="Header\Type\Object.hpp" />
     <ClInclude Include="Header\Type\String.hpp" />
+    <ClInclude Include="Header\Type\Type.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Header\System\Window.hpp" />

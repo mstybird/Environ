@@ -2,7 +2,6 @@
 
 #include "InterFace\IEquateble.hpp"
 #include"Object.hpp"
-#include "Char.hpp"
 #include "Integer.hpp"
 
 #include<string>
@@ -12,6 +11,7 @@ namespace Environ {
 	class Char;
 	class Between;
 	class Boolean;
+
 	/**
 		@class String
 		@brief std::Stringの拡張
@@ -207,7 +207,7 @@ namespace Environ {
 		@brief 文字列の長さを取得する
 		@return 文字列の長さ(バイト数)
 		*/
-		Int Length()const;
+		UInt Length()const;
 
 		/**
 		@brief	指定した位置の文字を取得する
@@ -215,7 +215,7 @@ namespace Environ {
 		@return 指定インデクスが指す文字。
 				範囲外アクセスだった場合は'\0'を返す
 		*/
-		Char At(const Int aIndex)const;
+		Char At(const UInt aIndex)const;
 
 		/**
 		@brief 末尾に文字列を追加する
@@ -317,14 +317,14 @@ namespace Environ {
 		@param	変更後のサイズ
 		@return このインスタンスの参照
 		*/
-		String& Resize(const Int aSize);
+		String& Resize(const UInt aSize);
 
 		/**
 		@brief	文字列のキャパシティを変更する。既にある文字列サイズより小さい値を指定した場合は、そのサイズの差分の文字列を消失する
 		@param	変更後のキャパシティ
 		@return このインスタンスの参照
 		*/
-		String& Reserve(const Int aSize);
+		String& Reserve(const UInt aSize);
 
 		/**
 		@brief	文字列をすべて削除する
@@ -367,7 +367,7 @@ namespace Environ {
 		@param	追加する文字列
 		@return このインスタンスの参照
 		*/
-		String& Insert(const Int aIndex,const Object& aObject);
+		String& Insert(const UInt aIndex,const Object& aObject);
 
 		/**
 		@brief	指定位置に文字列を追加する。
@@ -376,7 +376,7 @@ namespace Environ {
 		@param	追加する文字列の範囲指定インスタンス
 		@return このインスタンスの参照
 		*/
-		String& Insert(const Int aIndex,const Object&, const Between& aBetween);
+		String& Insert(const UInt aIndex,const Object&, const Between& aBetween);
 
 		/**
 		@brief	指定位置に文字列を追加する。
@@ -384,7 +384,7 @@ namespace Environ {
 		@param	追加する文字列
 		@return このインスタンスの参照
 		*/
-		String& Insert(const Int aIndex, const String& aObject);
+		String& Insert(const UInt aIndex, const String& aObject);
 
 		/**
 		@brief	指定位置に文字列を追加する。
@@ -393,7 +393,7 @@ namespace Environ {
 		@param	追加する文字列の範囲指定インスタンス
 		@return このインスタンスの参照
 		*/
-		String& Insert(const Int aIndex, const String&, const Between& aBetween);
+		String& Insert(const UInt aIndex, const String&, const Between& aBetween);
 
 
 		/**
@@ -437,7 +437,7 @@ namespace Environ {
 		@return	見つかった場合その見つかった文字列の先頭となるインデクス。
 		見つからなかった場合は、-1
 		*/
-		Int Find(const Object& aObject)const;
+		UInt Find(const Object& aObject)const;
 
 		/**
 		@brief	文字列を検索する
@@ -446,7 +446,7 @@ namespace Environ {
 		@return	見つかった場合その見つかった文字列の先頭となるインデクス。
 				見つからなかった場合は、-1
 		*/
-		Int Find(const Object& aObject, const Between& aStringBetween)const;
+		UInt Find(const Object& aObject, const Between& aStringBetween)const;
 
 		/**
 		@brief	文字列を検索する
@@ -455,7 +455,7 @@ namespace Environ {
 		@return	見つかった場合その見つかった文字列の先頭となるインデクス。
 		見つからなかった場合は、-1
 		*/
-		Int Find(const Object& aObject, const Int& aStartIndex)const;
+		UInt Find(const Object& aObject, const UInt& aStartIndex)const;
 
 		/**
 		@brief	文字列を検索する
@@ -464,7 +464,7 @@ namespace Environ {
 		@return	見つかった場合その見つかった文字列の先頭となるインデクス。
 		見つからなかった場合は、-1
 		*/
-		Int Find(const String& aObject)const;
+		UInt Find(const String& aObject)const;
 
 		/**
 		@brief	文字列を検索する
@@ -473,7 +473,7 @@ namespace Environ {
 		@return	見つかった場合その見つかった文字列の先頭となるインデクス。
 		見つからなかった場合は、-1
 		*/
-		Int Find(const String& aObject, const Between& aStringBetween)const;
+		UInt Find(const String& aObject, const Between& aStringBetween)const;
 
 		/**
 		@brief	文字列を検索する
@@ -482,7 +482,7 @@ namespace Environ {
 		@return	見つかった場合その見つかった文字列の先頭となるインデクス。
 		見つからなかった場合は、-1
 		*/
-		Int Find(const String& aObject, const Int& aStartIndex)const;
+		UInt Find(const String& aObject, const UInt& aStartIndex)const;
 
 
 
@@ -493,7 +493,7 @@ namespace Environ {
 		@return	見つかった場合その見つかった文字列の先頭となるインデクス。
 		見つからなかった場合は、-1
 		*/
-		Int FindBack(const Object& aObject, const Int& aStartIndex)const;
+		UInt FindBack(const Object& aObject, const UInt& aStartIndex)const;
 
 		/**
 		@brief	文字列を末尾から検索する
@@ -502,7 +502,7 @@ namespace Environ {
 		@return	見つかった場合その見つかった文字列の先頭となるインデクス。
 		見つからなかった場合は、-1
 		*/
-		Int FindBack(const String& aObject, const Int& aStartIndex)const;
+		UInt FindBack(const String& aObject, const UInt& aStartIndex)const;
 
 
 
@@ -542,3 +542,4 @@ namespace Environ {
 	protected:
 	};
 }
+

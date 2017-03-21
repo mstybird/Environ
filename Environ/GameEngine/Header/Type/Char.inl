@@ -1,7 +1,3 @@
-#include "..\..\GameEngine\Header\Type\Char.hpp"
-#include "..\..\GameEngine\Header\Type\Char.hpp"
-#include <Type/Char.hpp>
-#include <Type\String.hpp>
 #include<cuchar>
 
 namespace Environ {

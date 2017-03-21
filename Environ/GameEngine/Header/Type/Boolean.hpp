@@ -16,9 +16,7 @@ namespace Environ {
 		@class Boolean
 		@brief boolå^ägí£ÉNÉâÉX
 	*/
-
-
-
+	class String;
 	class Boolean:
 		public Object,
 		public IEquateble<bool>,

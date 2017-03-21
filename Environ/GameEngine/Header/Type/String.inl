@@ -1,10 +1,10 @@
-#include <Type\String.hpp>
-
+#pragma once
 namespace Environ {
 
 	//空文字列で初期化
 	String::String():std::string("")
 	{
+		
 	}
 
 	//キャパシティを指定してから文字列で初期化する
@@ -169,13 +169,13 @@ namespace Environ {
 	}
 
 	//現在の有効な文字列の長さを返す
-	Int String::Length() const
+	UInt String::Length() const
 	{
-		return std::string::size();
+		return UInt(std::string::size());
 	}
 
 	//指定した位置の文字を取得する
-	Char String::At(const Int aIndex) const
+	Char String::At(const UInt aIndex) const
 	{
 		if (aIndex >= 0 && aIndex < std::string::size()) {
 			return std::string::at(aIndex);
@@ -343,7 +343,7 @@ namespace Environ {
 	}
 
 	//実際の文字列のサイズを変更する。既にある文字列サイズより小さい値を指定した場合は、そのサイズの差分の文字列を消失する
-	String & String::Resize(const Int aSize)
+	String & String::Resize(const UInt aSize)
 	{
 		if (aSize < 0) {
 			std::string::resize(0);
@@ -355,7 +355,7 @@ namespace Environ {
 	}
 
 	//文字列のキャパシティを変更する。既にある文字列サイズより小さい値を指定した場合は、そのサイズの差分の文字列を消失する
-	String & String::Reserve(const Int aSize)
+	String & String::Reserve(const UInt aSize)
 	{
 		if (aSize < 0) {
 			std::string::reserve(0);
@@ -402,14 +402,14 @@ namespace Environ {
 	}
 
 	//指定位置に文字列を追加する。
-	String & String::Insert(const Int aIndex, const Object & aObject)
+	String & String::Insert(const UInt aIndex, const Object & aObject)
 	{
 		std::string::insert(aIndex, aObject.ToString());
 		return *this;
 	}
 
 	//指定位置に文字列を追加する。
-	String & String::Insert(const Int aIndex, const Object & aObject, const Between & aBetween)
+	String & String::Insert(const UInt aIndex, const Object & aObject, const Between & aBetween)
 	{
 		std::string::insert(
 			aIndex, 
@@ -421,13 +421,13 @@ namespace Environ {
 		return *this;
 	}
 
-	Environ::String& String::Insert(const Int aIndex, const String& aObject)
+	Environ::String& String::Insert(const UInt aIndex, const String& aObject)
 	{
 		std::string::insert(aIndex, aObject);
 		return *this;
 	}
 
-	Environ::String& String::Insert(const Int aIndex, const String& aObject, const Between& aBetween)
+	Environ::String& String::Insert(const UInt aIndex, const String& aObject, const Between& aBetween)
 	{
 		std::string::insert(
 			aIndex,
@@ -464,13 +464,14 @@ namespace Environ {
 	}
 
 	//文字列を検索する
-	Int String::Find(const Object & aObject) const
+	UInt String::Find(const Object & aObject) const
 	{
+		
 		return std::string::find(aObject.ToString());
 	}
 
 	//文字列を検索する
-	Int String::Find(const Object & aObject, const Between & aStringBetween)const
+	UInt String::Find(const Object & aObject, const Between & aStringBetween)const
 	{
 		return std::string::find(
 			aObject.ToString(),
@@ -480,7 +481,7 @@ namespace Environ {
 	}
 
 	//文字列を検索する
-	Int String::Find(const Object & aObject, const Int & aStartIndex)const
+	UInt String::Find(const Object & aObject, const UInt & aStartIndex)const
 	{
 		return std::string::find(
 			aObject.ToString(),
@@ -488,12 +489,12 @@ namespace Environ {
 		);
 	}
 
-	Int String::Find(const String& aObject) const
+	UInt String::Find(const String& aObject) const
 	{
 		return std::string::find(aObject);
 	}
 
-	Int String::Find(const String& aObject, const Between& aStringBetween) const
+	UInt String::Find(const String& aObject, const Between& aStringBetween) const
 	{
 		return std::string::find(
 			aObject.c_str(),
@@ -502,7 +503,7 @@ namespace Environ {
 		);
 	}
 
-	Int String::Find(const String& aObject, const Int& aStartIndex) const
+	UInt String::Find(const String& aObject, const UInt& aStartIndex) const
 	{
 		return std::string::find(
 			aObject,
@@ -511,7 +512,7 @@ namespace Environ {
 	}
 
 	//文字列を末尾から検索する
-	Int String::FindBack(const Object & aObject, const Int & aStartIndex)const
+	UInt String::FindBack(const Object & aObject, const UInt & aStartIndex)const
 	{
 		return std::string::rfind(
 			aObject.ToString(),
@@ -519,7 +520,7 @@ namespace Environ {
 		);
 	}
 
-	Int String::FindBack(const String& aObject, const Int& aStartIndex) const
+	UInt String::FindBack(const String& aObject, const UInt& aStartIndex) const
 	{
 		return std::string::rfind(
 			aObject,

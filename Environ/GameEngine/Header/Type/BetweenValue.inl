@@ -1,3 +1,4 @@
+#pragma once
 namespace Environ {
 
 	//範囲数値初期化
@@ -10,7 +11,7 @@ namespace Environ {
 	}
 
 	//範囲数値初期化
-	Between::Between(const Int aStart):
+	Between::Between(const UInt aStart):
 		mStart(aStart),
 		mEnd(aStart),
 		mStep(0)
@@ -20,7 +21,7 @@ namespace Environ {
 	}
 
 	//範囲数値初期化
-	Between::Between(const Int aStart, const Int aEnd) :
+	Between::Between(const UInt aStart, const UInt aEnd) :
 		mStart(aStart),
 		mEnd(0),
 		mStep(0)
@@ -35,7 +36,7 @@ namespace Environ {
 	}
 
 	//範囲数値初期化
-	Between::Between(const Int aStart, const Int aEnd, const Int aStep):
+	Between::Between(const UInt aStart, const UInt aEnd, const UInt aStep):
 		mStart(aStart),
 		mEnd(0),
 		mStep(aStep)
@@ -56,51 +57,51 @@ namespace Environ {
 	}
 
 	//差を求める
-	Int Between::Diff() const
+	UInt Between::Diff() const
 	{
 		return mEnd - mStart;
 	}
 
 	//開始値を取得する
-	Int Between::GetStart() const
+	UInt Between::GetStart() const
 	{
 		return mStart;
 	}
 
 	//終了値を取得する
-	Int Between::GetEnd() const
+	UInt Between::GetEnd() const
 	{
 		return mEnd;
 	}
 
 	//刻み値を取得する
-	Int Between::GetStep() const
+	UInt Between::GetStep() const
 	{
 		return mStep;
 	}
 	//開始値を設定する
-	Between& Between::SetStart(const Int& aStart)
+	Between& Between::SetStart(const UInt& aStart)
 	{
 		mStart = aStart;
 		return *this;
 	}
 
 	//終了値を設定する
-	Between& Between::SetEnd(const Int& aEnd)
+	Between& Between::SetEnd(const UInt& aEnd)
 	{
 		mEnd = aEnd;
 		return *this;
 	}
 
 	//刻み値を設定する
-	Between& Between::SetStep(const Int& aStep)
+	Between& Between::SetStep(const UInt& aStep)
 	{
 		mStep = aStep;
 		return *this;
 	}
 
 	//全ての値を設定する
-	Between& Between::SetBetween(const Int& aStart, const Int& aEnd, const Int& aStep)
+	Between& Between::SetBetween(const UInt& aStart, const UInt& aEnd, const UInt& aStep)
 	{
 		mStart = aStart;
 		mEnd = aEnd;

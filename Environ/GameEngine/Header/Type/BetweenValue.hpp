@@ -13,28 +13,29 @@
 
 namespace Environ {
 
+
 	class Between :public Object {
 	public:
 		Between();
-		Between(const Int aStart);
-		Between(const Int aStart, const Int aEnd);
-		Between(const Int aStart, const Int aEnd,const Int aStep);
+		Between(const UInt aStart);
+		Between(const UInt aStart, const UInt aEnd);
+		Between(const UInt aStart, const UInt aEnd,const UInt aStep);
 		~Between();
 
-		Int Diff()const;
-		Int GetStart()const;
-		Int GetEnd()const;
-		Int GetStep()const;
+		UInt Diff()const;
+		UInt GetStart()const;
+		UInt GetEnd()const;
+		UInt GetStep()const;
 
-		Between& SetStart(const Int& aStart);
-		Between& SetEnd(const Int& aEnd);
-		Between& SetStep(const Int& aStep);
-		Between& SetBetween(const Int& aStart,const Int& aEnd, const Int& aStep);
+		Between& SetStart(const UInt& aStart);
+		Between& SetEnd(const UInt& aEnd);
+		Between& SetStep(const UInt& aStep);
+		Between& SetBetween(const UInt& aStart,const UInt& aEnd, const UInt& aStep);
 
 	private:
-		Int mStart;
-		Int mEnd;
-		Int mStep;
+		UInt mStart;
+		UInt mEnd;
+		UInt mStep;
 	};
 }
 

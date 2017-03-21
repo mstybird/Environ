@@ -8,10 +8,12 @@ namespace Environ {
 		@brief 文字型クラス
 		内部でchar16_tの予定であったもののVS側の実装ミスによりcharに変更
 	*/
+	class String;
+	class Boolean;
 	class Char :
 		public Object,
-		public IEquateble<char>
-		//public IEquateble<Char>
+		public IEquateble<char>,
+		public IEquateble<Char>
 	{
 	public:
 		Char();
@@ -34,13 +36,14 @@ namespace Environ {
 
 
 		virtual Boolean Equal(const char& aValue)const override;
-		//virtual Boolean Equal(const Char& aValue)const override;
+		virtual Boolean Equal(const Char& aValue)const override;
 
 
-		//virtual String ToString() const override;
+		virtual String ToString() const override;
 
 	private:
 		char mValue;
 	};
 }
+
 

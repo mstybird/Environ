@@ -107,12 +107,11 @@ namespace Environ {
 
 }
 
-
 using SByte = Environ::Integer<int8_t>;
 using Byte = Environ::Integer<uint8_t>;
 using Short = Environ::Integer<int16_t>;
 using UShort = Environ::Integer<uint16_t>;
 using Int = Environ::Integer<int32_t>;
-using Uint = Environ::Integer<uint32_t>;
+using UInt = Environ::Integer<uint32_t>;
 using Long = Environ::Integer<int64_t>;
 using ULong = Environ::Integer<uint64_t>;

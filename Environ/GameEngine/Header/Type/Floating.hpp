@@ -30,7 +30,6 @@ namespace Environ {
 
 }
 
-
 using Float = Environ::Floating<float>;
 using Double = Environ::Floating<double>;
 using LDouble = Environ::Floating<long double>;
