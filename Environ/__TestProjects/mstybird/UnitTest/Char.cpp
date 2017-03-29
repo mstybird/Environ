@@ -1,5 +1,8 @@
 #include"stdafx.h"
-void f2() {
+
+
+
+void f3() {
 	__COUNTER__;
 	__COUNTER__;
 	__COUNTER__;

@@ -1,4 +1,4 @@
-#include<Type/Numeric.hpp>
+#pragma once
 
 #include<cstdint>
 namespace Environ {

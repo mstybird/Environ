@@ -2,16 +2,16 @@
 
 namespace Environ {
 	template<typename T>
-	Floating<T>::Floating() {}
+	inline Floating<T>::Floating() {}
 
 
 
 	template<typename T>
-	Floating<T>::~Floating()
+	inline Floating<T>::~Floating()
 	{
 	}
 
 	template<typename T>
-	Floating<T>::Floating(const T aValue) :Numeric<T>(aValue) {}
+	inline Floating<T>::Floating(const T aValue) :Numeric<T>(aValue) {}
 
 }

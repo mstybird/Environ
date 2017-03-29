@@ -17,7 +17,7 @@ namespace Environ {
 		@brief 組み込み数値型が前提なため、
 		T型の値は参照渡ししない(暗黙キャストを認めるため)
 	*/
-	template<typename T>
+	template<typename T=int>
 	class Numeric {
 	public:
 		/**

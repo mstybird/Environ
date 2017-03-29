@@ -1,7 +1,7 @@
-#include <Type\String.hpp>
+#pragma once
 
 namespace Environ {
-	String Environ::Object::ToString() const
+	inline String Environ::Object::ToString() const
 	{
 		return typeid(*this).name();
 	}

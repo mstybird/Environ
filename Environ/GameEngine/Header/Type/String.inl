@@ -2,42 +2,42 @@
 namespace Environ {
 
 	//空文字列で初期化
-	String::String():std::string("")
+	inline String::String():std::string("")
 	{
 		
 	}
 
 	//キャパシティを指定してから文字列で初期化する
-	String::String(const Int aCapacity):std::string("")
+	inline String::String(const Int aCapacity):std::string("")
 	{
 
 		if (aCapacity > 0)std::string::reserve(aCapacity);
 	}
 
 	//文字で初期化する
-	String::String(const char aObject)
+	inline String::String(const char aObject)
 	{
 		//charで初期化できるコンストラクタがなかったのでoperator==で代用
 		std::string::operator =(aObject);
 	}
 
 	//const char*文字列で初期化する
-	String::String(const char * aObject):std::string(aObject)
+	inline String::String(const char * aObject):std::string(aObject)
 	{
 		
 	}
 
-	String::String(const std::string & aObject):std::string(aObject)
+	inline String::String(const std::string & aObject):std::string(aObject)
 	{
 	}
 
 	//オブジェクトで初期化する
-	String::String(const Object & aObject):std::string(aObject.ToString())
+	inline String::String(const Object & aObject):std::string(aObject.ToString())
 	{
 	}
 
 	//オブジェクトで初期化し、キャパシティを設定する
-	String::String(const Object & aObject, const Int aCapacity): std::string(aObject.ToString())
+	inline String::String(const Object & aObject, const Int aCapacity): std::string(aObject.ToString())
 	{
 		if (aCapacity > 0)std::string::reserve(aCapacity);
 	}
@@ -45,26 +45,26 @@ namespace Environ {
 
 
 	//特になし
-	String::~String()
+	inline String::~String()
 	{
 	}
 
 	//const char*文字列ポインタを返す
-	String::operator const char*()
+	inline String::operator const char*()
 	{
 		return std::string::c_str();
 	}
 
 
 	//オブジェクトを代入する
-	String & String::operator=(const Object & aObject)
+	inline String & String::operator=(const Object & aObject)
 	{
 		std::string::operator =(aObject.ToString());
 		return *this;
 	}
 
 	//文字を代入する
-	String& String::operator=(const char aObject)
+	inline String& String::operator=(const char aObject)
 	{
 		std::string::operator =(aObject);
 		return *this;
@@ -72,14 +72,14 @@ namespace Environ {
 	}
 
 	//文字を代入する
-	String & String::operator=(const std::string & aObject)
+	inline String & String::operator=(const std::string & aObject)
 	{
 		std::string::operator =(aObject);
 		return *this;
 	}
 
 	//文字列を代入する
-	String& String::operator=(const char* aObject)
+	inline String& String::operator=(const char* aObject)
 	{
 		std::string::operator =(aObject);
 		return *this;
@@ -87,14 +87,14 @@ namespace Environ {
 	}
 
 	//文字列を末尾に追加する
-	String & String::operator+=(const Object & aObject)
+	inline String & String::operator+=(const Object & aObject)
 	{
 		std::string::operator +=(aObject.ToString());
 		return *this;
 	}
 
 	//文字列を末尾に追加する
-	String& String::operator+=(const char aObject)
+	inline String& String::operator+=(const char aObject)
 	{
 		std::string::operator +=(aObject);
 		return *this;
@@ -102,80 +102,80 @@ namespace Environ {
 	}
 
 	//文字列を末尾に追加する
-	String& String::operator+=(const char* aObject)
+	inline String& String::operator+=(const char* aObject)
 	{
 		std::string::operator +=(aObject);
 		return *this;
 	}
 
 	//文字列を末尾に追加する
-	String& String::operator+=(const String& aObject)
+	inline String& String::operator+=(const String& aObject)
 	{
 		std::string::operator +=(aObject);
 		return *this;
 	}
 
-	String & String::operator+=(const std::string & aObject)
+	inline String & String::operator+=(const std::string & aObject)
 	{
 		std::string::operator +=(aObject);
 		return *this;
 	}
 
 	//文字列が等しいか比較する
-	Boolean String::operator==(const Object & aObject)const
+	inline Boolean String::operator==(const Object & aObject)const
 	{
 		return std::string::compare(aObject.ToString()) == 0;
 	}
 
 	//文字列が等しいか比較する
-	Boolean String::operator==(const char* aObject) const
+	inline Boolean String::operator==(const char* aObject) const
 	{
 		return std::string::compare(aObject) == 0;
 	}
 
 	//文字列が等しいか比較する
-	Boolean String::operator==(const String& aObject) const
+	inline Boolean String::operator==(const String& aObject) const
 	{
 		return std::string::compare(aObject) == 0;
 	}
 
-	Boolean String::operator==(const std::string & aObject) const
+	inline Boolean String::operator==(const std::string & aObject) const
 	{
 		return std::string::compare(aObject) == 0;
 	}
 
 	//文字列が等しくないか比較する
-	Boolean String::operator!=(const Object & aObject)const
+	inline Boolean String::operator!=(const Object & aObject)const
 	{
 		return std::string::compare(aObject.ToString()) != 0;
 	}
 
 
 	//文字列が等しくないか比較する
-	Boolean String::operator!=(const char* aObject) const
+	inline Boolean String::operator!=(const char* aObject) const
 	{
 		return std::string::compare(aObject) != 0;
 	}
 
 	//文字列が等しくないか比較する
-	Boolean String::operator!=(const String& aObject) const
+	inline Boolean String::operator!=(const String& aObject) const
 	{
 		return std::string::compare(aObject) != 0;
 	}
 
-	Boolean String::operator!=(const std::string & aObject) const
+	inline Boolean String::operator!=(const std::string & aObject) const
 	{
 		return std::string::compare(aObject) != 0;
 	}
 
 	//現在の有効な文字列の長さを返す
-	UInt String::Length() const
+	inline UInt String::Length() const
 	{
 		return static_cast<uint32_t>(std::string::size());
 	}
 
 	//指定した位置の文字を取得する
-	Char String::At(const UInt aIndex) const
+	inline Char String::At(const UInt aIndex) const
 	{
 		if (aIndex >= 0 && aIndex < std::string::size()) {
 			return std::string::at(aIndex);
@@ -184,21 +184,21 @@ namespace Environ {
 		return Char();
 	}
 
-	String & String::Append(const char * aObject)
+	inline String & String::Append(const char * aObject)
 	{
 		std::string::append(aObject);
 		return *this;
 	}
 
 	//末尾に文字列を追加する
-	String & String::Append(const Object & aObject)
+	inline String & String::Append(const Object & aObject)
 	{
 		std::string::append(aObject.ToString());
 		return *this;
 	}
 
 	//末尾に指定範囲文字列を追加する
-	String & String::Append(const Object & aObject, const Between& aBetween)
+	inline String & String::Append(const Object & aObject, const Between& aBetween)
 	{
 		//範囲外チェック
 		auto lAppendStr = aObject.ToString();
@@ -218,21 +218,21 @@ namespace Environ {
 		return *this;
 	}
 
-	String & String::Set(const char * aObject)
+	inline String & String::Set(const char * aObject)
 	{
 		std::string::operator =(aObject);
 		return *this;
 	}
 
 	//文字列を代入する
-	String & String::Set(const Object & aObject)
+	inline String & String::Set(const Object & aObject)
 	{
 		std::string::operator =(aObject.ToString());
 		return *this;
 	}
 
 	//指定範囲文字列を代入する
-	String & String::Set(const Object & aObject, const Between& aBetween)
+	inline String & String::Set(const Object & aObject, const Between& aBetween)
 	{
 		//範囲外チェック
 		auto lAppendStr = aObject.ToString();
@@ -253,7 +253,7 @@ namespace Environ {
 	}
 
 	//文字列が数字のみで構成されているか調べる
-	Boolean String::IsDigits() const
+	inline Boolean String::IsDigits() const
 	{
 		Boolean lDigitFlag = true;
 		
@@ -268,7 +268,7 @@ namespace Environ {
 	}
 
 	//文字列が半角アルファベットのみで構成されているか調べる
-	Boolean String::IsAlpha() const
+	inline Boolean String::IsAlpha() const
 	{
 		Boolean lAlphaFlag = true;
 
@@ -283,7 +283,7 @@ namespace Environ {
 	}
 
 	//文字列が半角アルファベットの大文字のみで構成されているか調べる
-	Boolean String::IsUpper() const
+	inline Boolean String::IsUpper() const
 	{
 		Boolean lUpperFlag = true;
 
@@ -298,7 +298,7 @@ namespace Environ {
 	}
 
 	//文字列が半角アルファベットの小文字のみで構成されているか調べる
-	Boolean String::IsLower() const
+	inline Boolean String::IsLower() const
 	{
 		Boolean lLowerFlag = true;
 
@@ -313,7 +313,7 @@ namespace Environ {
 	}
 
 	//この文字列に含まれる半角アルファベットをすべて大文字にする
-	String & String::Uppering()
+	inline String & String::Uppering()
 	{
 		for (auto& lChar : *this) {
 			::toupper(lChar);
@@ -322,7 +322,7 @@ namespace Environ {
 	}
 
 	//この文字列に含まれる半角アルファベットをすべて小文字にする
-	String & String::Lowering()
+	inline String & String::Lowering()
 	{
 		for (auto& lChar : *this) {
 			::tolower(lChar);
@@ -331,19 +331,19 @@ namespace Environ {
 	}
 
 	//この文字列に含まれる半角アルファベットをすべて大文字にしたものを取得する
-	String String::GetUpper() const
+	inline String String::GetUpper() const
 	{
 		return String(*this).Uppering();
 	}
 
 	//この文字列に含まれる半角アルファベットをすべて小文字にしたものを取得する
-	String String::GetLower() const
+	inline String String::GetLower() const
 	{
 		return String(*this).Lowering();
 	}
 
 	//実際の文字列のサイズを変更する。既にある文字列サイズより小さい値を指定した場合は、そのサイズの差分の文字列を消失する
-	String & String::Resize(const UInt aSize)
+	inline String & String::Resize(const UInt aSize)
 	{
 		if (aSize < 0) {
 			std::string::resize(0);
@@ -355,7 +355,7 @@ namespace Environ {
 	}
 
 	//文字列のキャパシティを変更する。既にある文字列サイズより小さい値を指定した場合は、そのサイズの差分の文字列を消失する
-	String & String::Reserve(const UInt aSize)
+	inline String & String::Reserve(const UInt aSize)
 	{
 		if (aSize < 0) {
 			std::string::reserve(0);
@@ -366,21 +366,21 @@ namespace Environ {
 		return *this;
 	}
 
-	String & String::Clear()
+	inline String & String::Clear()
 	{
 		std::string::clear();
 		return *this;
 	}
 
 	//指定した範囲の文字列を削除する。Between::Stepが有効な値だった場合は、そのステップ幅に従って文字を削除する
-	String & String::Erasing(const Between aBetween)
+	inline String & String::Erasing(const Between aBetween)
 	{
 		std::string::erase(aBetween.GetStart(), aBetween.GetEnd() - aBetween.GetStart());
 		return *this;
 	}
 
 	//指定した範囲で文字列を構成する。
-	String & String::Subbing(const Between aBetween)
+	inline String & String::Subbing(const Between aBetween)
 	{
 		*this=std::move(std::string::substr(aBetween.GetStart(), 
 			aBetween.GetEnd() - aBetween.GetStart()
@@ -391,7 +391,7 @@ namespace Environ {
 	}
 
 	//指定した範囲の文字列を取得する
-	String String::GetSub(const Between & aBetween) const
+	inline String String::GetSub(const Between & aBetween) const
 	{
 		return std::move(
 			std::string::substr(
@@ -402,14 +402,14 @@ namespace Environ {
 	}
 
 	//指定位置に文字列を追加する。
-	String & String::Insert(const UInt aIndex, const Object & aObject)
+	inline String & String::Insert(const UInt aIndex, const Object & aObject)
 	{
 		std::string::insert(aIndex, aObject.ToString());
 		return *this;
 	}
 
 	//指定位置に文字列を追加する。
-	String & String::Insert(const UInt aIndex, const Object & aObject, const Between & aBetween)
+	inline String & String::Insert(const UInt aIndex, const Object & aObject, const Between & aBetween)
 	{
 		std::string::insert(
 			aIndex, 
@@ -421,13 +421,13 @@ namespace Environ {
 		return *this;
 	}
 
-	Environ::String& String::Insert(const UInt aIndex, const String& aObject)
+	inline String& String::Insert(const UInt aIndex, const String& aObject)
 	{
 		std::string::insert(aIndex, aObject);
 		return *this;
 	}
 
-	Environ::String& String::Insert(const UInt aIndex, const String& aObject, const Between& aBetween)
+	inline String& String::Insert(const UInt aIndex, const String& aObject, const Between& aBetween)
 	{
 		std::string::insert(
 			aIndex,
@@ -440,7 +440,7 @@ namespace Environ {
 	}
 
 	//指定した範囲を別の文字列で置き換える
-	String & String::Replacing(const Between & aReplaceBetween, const Object & aObject)
+	inline String & String::Replacing(const Between & aReplaceBetween, const Object & aObject)
 	{
 		std::string::replace(
 			aReplaceBetween.GetStart(),
@@ -451,7 +451,7 @@ namespace Environ {
 	}
 
 	//指定した範囲を別の範囲文字列で置き換える
-	String & String::Replacing(const Between & aReplaceBetween, const Object & aObject, const Between & aStringBetween)
+	inline String & String::Replacing(const Between & aReplaceBetween, const Object & aObject, const Between & aStringBetween)
 	{
 		std::string::replace(
 			aReplaceBetween.GetStart(),
@@ -464,14 +464,14 @@ namespace Environ {
 	}
 
 	//文字列を検索する
-	UInt String::Find(const Object & aObject) const
+	inline UInt String::Find(const Object & aObject) const
 	{
 		
 		return static_cast<uint32_t>(std::string::find(aObject.ToString()));
 	}
 
 	//文字列を検索する
-	UInt String::Find(const Object & aObject, const Between & aStringBetween)const
+	inline UInt String::Find(const Object & aObject, const Between & aStringBetween)const
 	{
 		return static_cast<uint32_t>(std::string::find(
 			aObject.ToString(),
@@ -481,7 +481,7 @@ namespace Environ {
 	}
 
 	//文字列を検索する
-	UInt String::Find(const Object & aObject, const UInt & aStartIndex)const
+	inline UInt String::Find(const Object & aObject, const UInt & aStartIndex)const
 	{
 		return static_cast<uint32_t>(std::string::find(
 			aObject.ToString(),
@@ -489,12 +489,12 @@ namespace Environ {
 		));
 	}
 
-	UInt String::Find(const String& aObject) const
+	inline UInt String::Find(const String& aObject) const
 	{
 		return static_cast<uint32_t>(std::string::find(aObject));
 	}
 
-	UInt String::Find(const String& aObject, const Between& aStringBetween) const
+	inline UInt String::Find(const String& aObject, const Between& aStringBetween) const
 	{
 		return static_cast<uint32_t>(std::string::find(
 			aObject.c_str(),
@@ -503,7 +503,7 @@ namespace Environ {
 		));
 	}
 
-	UInt String::Find(const String& aObject, const UInt& aStartIndex) const
+	inline UInt String::Find(const String& aObject, const UInt& aStartIndex) const
 	{
 		return static_cast<uint32_t>(std::string::find(
 			aObject,
@@ -512,7 +512,7 @@ namespace Environ {
 	}
 
 	//文字列を末尾から検索する
-	UInt String::FindBack(const Object & aObject, const UInt & aStartIndex)const
+	inline UInt String::FindBack(const Object & aObject, const UInt & aStartIndex)const
 	{
 		return static_cast<uint32_t>(std::string::rfind(
 			aObject.ToString(),
@@ -520,7 +520,7 @@ namespace Environ {
 		));
 	}
 
-	UInt String::FindBack(const String& aObject, const UInt& aStartIndex) const
+	inline UInt String::FindBack(const String& aObject, const UInt& aStartIndex) const
 	{
 		return static_cast<uint32_t>(std::string::rfind(
 			aObject,
@@ -529,30 +529,30 @@ namespace Environ {
 	}
 
 	//文字列を比較する
-	Boolean String::Equal(const Object & aValue) const
+	inline Boolean String::Equal(const Object & aValue) const
 	{
 		return this->operator ==(aValue.ToString());
 	}
 
 
-	Boolean String::Equal(const String & aValue) const
+	inline Boolean String::Equal(const String & aValue) const
 	{
 		return this->operator ==(aValue);
 	}
 
-	Boolean String::Equal(const std::string& aValue) const
+	inline Boolean String::Equal(const std::string& aValue) const
 	{
 		return this->operator ==(aValue);
 	}
 
-	Boolean String::Equal(const char *& aValue) const
+	inline Boolean String::Equal(const char *& aValue) const
 	{
 		return this->operator ==(aValue);
 	}
 
 
 	//文字列を取得する※非推奨
-	String String::ToString() const
+	inline String String::ToString() const
 	{
 		return *this;
 	}

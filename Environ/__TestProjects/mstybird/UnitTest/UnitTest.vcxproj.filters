@@ -26,9 +26,6 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="unittest1.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
     <ClCompile Include="Numeric.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>

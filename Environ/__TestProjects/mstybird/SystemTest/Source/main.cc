@@ -1,8 +1,7 @@
 #include"Configure\Integration.hh"
-
+#include"Type/Type.hpp"
 #include<System/Window.hpp>
 #include <System/EntryPoint.hpp>
-#include <Type\Numeric.hpp>
 
 
 #include <string>
