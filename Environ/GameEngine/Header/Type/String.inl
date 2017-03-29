@@ -171,7 +171,7 @@ namespace Environ {
 	//Œ»İ‚Ì—LŒø‚È•¶š—ñ‚Ì’·‚³‚ğ•Ô‚·
 	UInt String::Length() const
 	{
-		return UInt(std::string::size());
+		return static_cast<uint32_t>(std::string::size());
 	}
 
 	//w’è‚µ‚½ˆÊ’u‚Ì•¶š‚ğæ“¾‚·‚é
@@ -467,65 +467,65 @@ namespace Environ {
 	UInt String::Find(const Object & aObject) const
 	{
 		
-		return std::string::find(aObject.ToString());
+		return static_cast<uint32_t>(std::string::find(aObject.ToString()));
 	}
 
 	//•¶š—ñ‚ğŒŸõ‚·‚é
 	UInt String::Find(const Object & aObject, const Between & aStringBetween)const
 	{
-		return std::string::find(
+		return static_cast<uint32_t>(std::string::find(
 			aObject.ToString(),
 			aStringBetween.GetStart(),
 			aStringBetween.GetEnd()- aStringBetween.GetStart()
-			);
+			));
 	}
 
 	//•¶š—ñ‚ğŒŸõ‚·‚é
 	UInt String::Find(const Object & aObject, const UInt & aStartIndex)const
 	{
-		return std::string::find(
+		return static_cast<uint32_t>(std::string::find(
 			aObject.ToString(),
 			aStartIndex
-		);
+		));
 	}
 
 	UInt String::Find(const String& aObject) const
 	{
-		return std::string::find(aObject);
+		return static_cast<uint32_t>(std::string::find(aObject));
 	}
 
 	UInt String::Find(const String& aObject, const Between& aStringBetween) const
 	{
-		return std::string::find(
+		return static_cast<uint32_t>(std::string::find(
 			aObject.c_str(),
 			aStringBetween.GetStart(),
 			aStringBetween.GetEnd() - aStringBetween.GetStart()
-		);
+		));
 	}
 
 	UInt String::Find(const String& aObject, const UInt& aStartIndex) const
 	{
-		return std::string::find(
+		return static_cast<uint32_t>(std::string::find(
 			aObject,
 			aStartIndex
-		);
+		));
 	}
 
 	//•¶š—ñ‚ğ––”ö‚©‚çŒŸõ‚·‚é
 	UInt String::FindBack(const Object & aObject, const UInt & aStartIndex)const
 	{
-		return std::string::rfind(
+		return static_cast<uint32_t>(std::string::rfind(
 			aObject.ToString(),
 			aStartIndex
-		);
+		));
 	}
 
 	UInt String::FindBack(const String& aObject, const UInt& aStartIndex) const
 	{
-		return std::string::rfind(
+		return static_cast<uint32_t>(std::string::rfind(
 			aObject,
 			aStartIndex
-		);
+		));
 	}
 
 	//•¶š—ñ‚ğ”äŠr‚·‚é
