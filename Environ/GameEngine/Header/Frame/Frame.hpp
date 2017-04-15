@@ -7,7 +7,7 @@ namespace Environ {
 	class Window;
 	class Frame {
 	public:
-		DllEntry static int Create(
+		DllEntry static Boolean Create(
 			const int aParent,
 			const int aPosX,
 			const int aPosY,

@@ -85,14 +85,14 @@ namespace Environ {
 	//アルファベットを小文字に変換
 	inline Char & Char::ToLower()
 	{
-		mValue = ::tolower(mValue);
+		mValue = static_cast<char>(::tolower(mValue));
 		return *this;
 	}
 
 	//アルファベットを大文字に変換
 	inline Char & Char::ToUpper()
 	{
-		mValue = ::toupper(mValue);
+		mValue = static_cast<char>(::toupper(mValue));
 		return *this;
 	}
 
