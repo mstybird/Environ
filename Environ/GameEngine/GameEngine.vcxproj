@@ -121,6 +121,7 @@
     <ClInclude Include="Header\Configure\wxWidgetsLinkSetting.hpp" />
     <ClInclude Include="Header\Debug\Memory.hpp" />
     <ClInclude Include="Header\Configure\DLLSettings.hpp" />
+    <ClInclude Include="Header\Frame\Frame.hpp" />
     <ClInclude Include="Header\InterFace\IEquateble.hpp" />
     <ClInclude Include="Header\InterFace\IParseble.hpp" />
     <ClInclude Include="Header\PreCompiled\C++.hpp" />

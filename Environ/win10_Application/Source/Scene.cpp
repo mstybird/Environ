@@ -1,4 +1,4 @@
-#include"Configure\Integration.hh"
+//#include"Configure\Integration.hh"
 #include <System\Window.hpp>
 #include <System\CoreSystem.hpp>
 

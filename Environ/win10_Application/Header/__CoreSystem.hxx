@@ -7,7 +7,6 @@
 
 	@brief アプリケーション管理用クラスの定義
 */
-#include"Configure\Integration.hh"
 
 #include <System/CoreSystem.hpp>
 

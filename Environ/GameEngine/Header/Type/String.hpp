@@ -15,9 +15,14 @@ namespace Environ {
 	/**
 		@class String
 		@brief std::Stringの拡張
+
+
+		//要注意
+		イテレータの兼ね合いで一時的にstd:stringをpublic継承している(修正最重要内容)
+
 	*/
 	class String:
-		std::string,
+		public std::string,
 		public IEquateble<std::string>,
 		public IEquateble<Object>,
 		public IEquateble<String>,
@@ -79,7 +84,7 @@ namespace Environ {
 		@return この文字列のconst charポインタ
 		*/
 		operator const char*();
-
+		operator const std::string();
 		/**
 		@brief 指定文字列を代入する
 		@param 文字列
