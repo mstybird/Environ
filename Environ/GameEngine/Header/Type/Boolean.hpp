@@ -45,7 +45,7 @@ namespace Environ {
 		@brief 変更可能なboolインスタンスを取得する
 		@return このインスタンスの現在のbool値
 		*/
-		operator bool()const;
+		operator bool();
 
 		/**
 		@brief	変更不可能なbool参照を返す
