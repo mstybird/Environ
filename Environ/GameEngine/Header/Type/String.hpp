@@ -5,6 +5,7 @@
 #include "Integer.hpp"
 
 #include<string>
+#include<vector>
 
 namespace Environ {
 
@@ -22,13 +23,19 @@ namespace Environ {
 
 	*/
 	class String:
-		public std::string,
 		public IEquateble<std::string>,
 		public IEquateble<Object>,
 		public IEquateble<String>,
 		public Object
 	{
 	public:
+
+		//イテレータ
+		using Iteletor = std::vector<Char>::iterator;
+		using IteletorConst = std::vector<Char>::const_iterator;
+		using IteletorReverse = std::vector<Char>::reverse_iterator;
+		using IteletorReverseConst = std::vector<Char>::const_reverse_iterator;
+
 
 
 		/**
@@ -49,7 +56,7 @@ namespace Environ {
 		String(const char aObject);
 
 		/**
-		@brief
+		@brief 指定文字列で初期化(内部でpush_backを使っているため遅い)
 		@param 初期化文字列
 		*/
 		String(const char* aObject);
@@ -78,13 +85,24 @@ namespace Environ {
 		*/
 		~String();
 
+		Iteletor begin();
+		IteletorConst begin()const;
+		IteletorConst cbegin()const;
+		IteletorReverse rbegin();
+		IteletorReverseConst rcbegin()const;
+
+		Iteletor end();
+		IteletorConst end()const;
+		IteletorConst cend()const;
+		IteletorReverse rend();
+		IteletorReverseConst rcend()const;
 
 		/**
 		@brief const char*形式の文字列を取得する
 		@return この文字列のconst charポインタ
 		*/
-		operator const char*();
-		operator const std::string();
+		operator const char*()const;
+		operator const Char*()const;
 		/**
 		@brief 指定文字列を代入する
 		@param 文字列
@@ -543,6 +561,8 @@ namespace Environ {
 		*/
 		[[deprecated]]
 		virtual String ToString() const override;
+
+		std::vector<Char> mValue;	//内部で扱う文字列インスタンス
 
 	protected:
 	};
