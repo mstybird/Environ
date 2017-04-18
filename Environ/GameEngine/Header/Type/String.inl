@@ -3,6 +3,7 @@
 #include"Boolean.hpp"
 #include"BetweenValue.hpp"
 #include"Char.hpp"
+#include<algorithm>
 
 //終端に必ず\0を入れるため、サイズは必ず内部的には1多い形になる
 //必ずサイズ1以上となる
@@ -73,6 +74,11 @@ namespace Environ {
 	
 		//必ずnull文字分別確保のため+1
 		if (aCapacity+1 > mValue.size())mValue.reserve(aCapacity+1);
+
+	}
+
+	inline String::String(const std::vector<Char>& aObject):mValue(std::move(aObject))
+	{
 
 	}
 
@@ -505,31 +511,70 @@ namespace Environ {
 		else {
 			mValue.reserve(aSize);
 		}
-		String s;
 		
 		return *this;
 	}
 
+	//文字列クリア
 	inline String & String::Clear()
 	{
 		mValue.clear();
+		//\0だけ入れておく
+		mValue.push_back('\0');
 		return *this;
 	}
 
 	//指定した範囲の文字列を削除する。Between::Stepが有効な値だった場合は、そのステップ幅に従って文字を削除する
-	inline String & String::Erasing(const Between aBetween)
+	inline String & String::Erasing(const Between& aBetween)
 	{
-		mValue.erase(aBetween.GetStart(), aBetween.GetEnd() - aBetween.GetStart());
+		//有効範囲チェック
+		if (this->IsRange(aBetween) == false)return *this;
+		//刻み値が無効な値(未設定、不正値)であれば//範囲remove
+		Iteletor lRemoveIt;
+		if (aBetween.GetStep() > 1 && aBetween.GetStep() < this->Length()) {
+			mValue.erase(
+				this->begin() + aBetween.GetStart(),
+				this->begin() + aBetween.GetEnd()
+				);
+		}
+		//有効な値だった場合、範囲remove_if
+		else {
+			//刻み値チェックカウンタ
+			int lRemoveCounter{ 0 };
+			lRemoveIt = std::remove_if(
+				this->begin()+ aBetween.GetStart(), 
+				this->begin()+aBetween.GetEnd(),
+				[&lRemoveCounter,&aBetween, this](const auto) {
+				auto lNotRemove = lRemoveCounter == 0;
+				++lRemoveCounter;
+				lRemoveCounter %= aBetween.GetStep();
+				return lNotRemove;
+			});
+
+			mValue.erase(lRemoveIt, this->end());
+			mValue.push_back('\0');
+
+		}
 		return *this;
 	}
 
 	//指定した範囲で文字列を構成する。
-	inline String & String::Subbing(const Between aBetween)
+	inline String & String::Subbing(const Between& aBetween)
 	{
-		*this=std::move(mValue.substr(aBetween.GetStart(), 
-			aBetween.GetEnd() - aBetween.GetStart()
-			)
+		//範囲チェック
+		if (this->IsRange(aBetween) == false)return *this;
+
+		decltype(mValue) lTemp;
+		lTemp.reserve(aBetween.GetEnd() - aBetween.GetStart() + 1);
+
+		std::copy(
+			mValue.begin() + aBetween.GetStart(),
+			mValue.begin() + aBetween.GetEnd(),
+			std::back_inserter(lTemp)
 		);
+		lTemp.push_back('\0');
+		//ここで初めて文字列再構成反映
+		mValue = std::move(lTemp);
 
 		return *this;
 	}
@@ -537,47 +582,61 @@ namespace Environ {
 	//指定した範囲の文字列を取得する
 	inline String String::GetSub(const Between & aBetween) const
 	{
-		return std::move(
-			mValue.substr(
-				aBetween.GetStart(), 
-				aBetween.GetEnd() - aBetween.GetStart()
-			)
+		//範囲チェック
+		if (this->IsRange(aBetween) == false)return *this;
+
+		decltype(mValue) lTemp;
+		lTemp.reserve(aBetween.GetEnd() - aBetween.GetStart() + 1);
+
+		std::copy(
+			mValue.begin() + aBetween.GetStart(),
+			mValue.begin() + aBetween.GetEnd(),
+			std::back_inserter(lTemp)
 		);
+		lTemp.push_back('\0'); 
+		//実体コピーはなし。コンストラクタ内でムーブしている
+		return lTemp;
 	}
 
 	//指定位置に文字列を追加する。
 	inline String & String::Insert(const UInt aIndex, const Object & aObject)
 	{
-		mValue.insert(aIndex, aObject.ToString());
-		return *this;
+		return this->Insert(aIndex, aObject.ToString());
 	}
 
 	//指定位置に文字列を追加する。
 	inline String & String::Insert(const UInt aIndex, const Object & aObject, const Between & aBetween)
 	{
-		mValue.insert(
-			aIndex, 
-			aObject.ToString(),
-			aBetween.GetStart(),
-			aBetween.GetEnd() - aBetween.GetStart()
-		);
-
-		return *this;
+		return this->Insert(aIndex, aObject.ToString(),aBetween);
 	}
 
 	inline String& String::Insert(const UInt aIndex, const String& aObject)
 	{
-		mValue.insert(aIndex, aObject);
+		//範囲チェック
+		if (IsRange(aIndex) == false)return *this;
+		this->Reserve(this->Length() + aObject.Length());
+
+		mValue.insert(this->begin() + aIndex, aObject.begin(), aObject.end());
+
 		return *this;
 	}
 
 	inline String& String::Insert(const UInt aIndex, const String& aObject, const Between& aBetween)
 	{
+		//範囲チェック
+		if (IsRange(aIndex) == false)return *this;
+
+
+		//挿入文字列の範囲内か調べる
+		if (aObject.IsRange(aBetween) == false)return *this;
+
+		this->Reserve(this->Length() + aObject.Length());
+
+
 		mValue.insert(
-			aIndex,
-			aObject,
-			aBetween.GetStart(),
-			aBetween.GetEnd() - aBetween.GetStart()
+			this->begin() + aIndex,
+			aObject.begin() + aBetween.GetStart(),
+			aObject.begin() + aBetween.GetEnd()
 		);
 
 		return *this;
@@ -586,56 +645,99 @@ namespace Environ {
 	//指定した範囲を別の文字列で置き換える
 	inline String & String::Replacing(const Between & aReplaceBetween, const Object & aObject)
 	{
-		mValue.replace(
-			aReplaceBetween.GetStart(),
-			aReplaceBetween.GetEnd() - aReplaceBetween.GetStart(),
-			aObject.ToString()
-		);
-		return *this;
+		return this->Replacing(aReplaceBetween, aObject.ToString());
 	}
 
 	//指定した範囲を別の範囲文字列で置き換える
 	inline String & String::Replacing(const Between & aReplaceBetween, const Object & aObject, const Between & aStringBetween)
 	{
-		mValue.replace(
-			aReplaceBetween.GetStart(),
-			aReplaceBetween.GetEnd() - aReplaceBetween.GetStart(),
-			aObject.ToString(),
-			aStringBetween.GetStart(),
-			aStringBetween.GetEnd() - aStringBetween.GetStart()
-			);
-		return *this;
+		return this->Replacing(aReplaceBetween, aObject.ToString());
+	}
+
+	inline String & String::Replacing(const Between & aReplaceBetween, const String & aObject)
+	{
+		//範囲チェック
+		if (IsRange(aReplaceBetween) == false)return *this;
+
+		//不要文字列の削除
+		mValue.erase(
+			aObject.begin() + aReplaceBetween.GetStart(),
+			aObject.begin() + aReplaceBetween.GetEnd()
+		);
+		//文字列挿入
+		return this->Insert(aReplaceBetween.GetStart(), aObject);
+	}
+
+	inline String & String::Replacing(const Between & aReplaceBetween, const String & aObject, const Between & aStringBetween)
+	{
+		//範囲チェック
+		if (IsRange(aReplaceBetween) == false)return *this;
+		if (aObject.IsRange(aStringBetween) == false)return *this;
+
+		//不要文字列の削除
+		mValue.erase(
+			aObject.begin() + aReplaceBetween.GetStart(),
+			aObject.begin() + aReplaceBetween.GetEnd()
+		);
+		//文字列挿入
+		this->Insert(
+			aReplaceBetween.GetStart(), 
+			aObject,aStringBetween);
+
 	}
 
 	//文字列を検索する
 	inline UInt String::Find(const Object & aObject) const
 	{
-		
-		return static_cast<uint32_t>(mValue.find(aObject.ToString()));
+		return this->Find(aObject.ToString());
 	}
 
 	//文字列を検索する
 	inline UInt String::Find(const Object & aObject, const Between & aStringBetween)const
 	{
-		return static_cast<uint32_t>(mValue.find(
-			aObject.ToString(),
-			aStringBetween.GetStart(),
-			aStringBetween.GetEnd()- aStringBetween.GetStart()
-			));
+		return this->Find(aObject.ToString(), aStringBetween);
 	}
 
 	//文字列を検索する
 	inline UInt String::Find(const Object & aObject, const UInt & aStartIndex)const
 	{
-		return static_cast<uint32_t>(mValue.find(
-			aObject.ToString(),
-			aStartIndex
-		));
+		return this->Find(aObject.ToString(),aStartIndex);
 	}
+
 
 	inline UInt String::Find(const String& aObject) const
 	{
-		return static_cast<uint32_t>(mValue.find(aObject));
+		//無駄があるので余裕があれば最適化する by mstybird 2017/04/18
+
+		UInt lResult = this->Length();
+		UInt lThisLoopCount = this->Length() - aObject.Length();
+		for (auto i = 0; i < lThisLoopCount; ++i) {
+			//次のループが終えるまでにtrueであれば、一致する文字列が見つかったということ
+			UInt j;
+			for (j = 0; j < aObject.Length(); ++j) {
+				//このインスタンスの文字列が検索文字列より短い場合、見つからないのでfalse
+				if (lThisLoopCount - i < aObject.Length()) {
+					break;
+				}
+
+				//文字単位で一致しているか調べる
+				if (At(i + j) != aObject.At(j)) {
+					break;
+				}
+
+				//ループを回りきっていると発見
+				if (j == aObject.Length()) {
+					lResult = i;
+					break;
+				}
+			}
+
+			//lResultがこの文字列の長さ以外になっていれば(更新されている)発見
+			if (lResult != this->Length())break;
+
+		}
+
+		return static_cast<uint32_t>(lResult);
 	}
 
 	inline UInt String::Find(const String& aObject, const Between& aStringBetween) const
@@ -694,6 +796,20 @@ namespace Environ {
 		return this->operator ==(aValue);
 	}
 
+	inline bool String::IsRange(const Between & aBetween)const
+	{
+		if (aBetween.GetStart() < 0 || aBetween.GetEnd() - Length())return false;
+		if (aBetween.GetStart() <= aBetween.GetEnd() && aBetween.GetEnd() < Length())return false;
+
+		return true;
+	}
+
+
+
+	inline bool String::IsRange(const UInt & aIndex) const
+	{
+		return aIndex >= 0 && aIndex < Length();
+	}
 
 	//文字列を取得する※非推奨
 	inline String String::ToString() const

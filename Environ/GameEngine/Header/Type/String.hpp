@@ -81,6 +81,13 @@ namespace Environ {
 		String(const Object& aObject,const Int aCapacity);
 
 		/**
+		@brief
+		@param 初期化文字列
+		*/
+		String(const std::vector<Char>& aObject);
+
+
+		/**
 		@brief 文字列開放処理
 		*/
 		~String();
@@ -103,6 +110,11 @@ namespace Environ {
 		*/
 		operator const char*()const;
 		operator const Char*()const;
+
+		//組み込み演算子の都合上、組み込み型を使用
+		Char& operator[](int aIndex)const;
+
+
 		/**
 		@brief 指定文字列を代入する
 		@param 文字列
@@ -343,7 +355,7 @@ namespace Environ {
 		String& Resize(const UInt aSize);
 
 		/**
-		@brief	文字列のキャパシティを変更する。既にある文字列サイズより小さい値を指定した場合は、そのサイズの差分の文字列を消失する
+		@brief	文字列のキャパシティを変更する。既にある文字列サイズより小さい値を指定した場合は、変化しない
 		@param	変更後のキャパシティ
 		@return このインスタンスの参照
 		*/
@@ -360,7 +372,7 @@ namespace Environ {
 		@param	範囲指定インスタンス
 		@return このインスタンスの参照
 		*/
-		String& Erasing(const Between aBetween);
+		String& Erasing(const Between& aBetween);
 
 
 		/**
@@ -371,7 +383,7 @@ namespace Environ {
 		@param	範囲指定インスタンス
 		@return このインスタンスの参照
 		*/
-		String& Subbing(const Between aBetween);
+		String& Subbing(const Between& aBetween);
 
 
 		/**
@@ -451,7 +463,7 @@ namespace Environ {
 		@param	置き換える文字列の範囲
 		@return このインスタンスの参照
 		*/
-		String& Replacing(const Between& aReplaceBetween, const String&, const Between& aStringBetween);
+		String& Replacing(const Between& aReplaceBetween, const String&aObject, const Between& aStringBetween);
 
 		/**
 		@brief	文字列を検索する
@@ -551,6 +563,22 @@ namespace Environ {
 		@return	完全一致すればtrourが返る。
 		*/
 		virtual Boolean Equal(const char*& aValue) const;
+
+
+		/**
+		@brief	インデックスがこの文字列の範囲内に収まるか調べる
+		@param	範囲指定Between
+		@return	範囲内ならtrue。範囲外ならfalse
+		*/
+		bool IsRange(const Between& aBetween)const;
+
+
+		/**
+		@brief	インデックスがこの文字列の範囲内に収まるか調べる
+		@param	インデックス
+		@return	範囲内ならtrue。範囲外ならfalse
+		*/
+		bool IsRange(const UInt& aIndex)const;
 
 
 	private:
