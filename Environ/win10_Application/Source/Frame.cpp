@@ -4,12 +4,12 @@
 #include "__Window.hpp"
 #include"__Frame.hxx"
 
-Environ::Boolean Environ::Frame::Create(const int aParent,
+bool Environ::Frame::Create(const int aParent,
 	const int aPosX,
 	const int aPosY,
 	const int aWidth,
 	const int aHeight,
-	const String& aIDString)
+	const std::string& aIDString)
 {
 	auto lWindow = wxWindow::FindWindowById(aParent);
 	//‘¶İ‚µ‚Ä‚¢‚ê‚Îì¬‚µ‚Ä‚»‚ÌƒtƒŒ[ƒ€(wxPanel)‚ÌID‚ğ•Ô‚·

@@ -45,37 +45,10 @@
     <ClInclude Include="Header\Configure\Integration.hh">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Header\Type\Integer.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Header\Type\Numeric.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Header\Type\Floating.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Header\Type\Boolean.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Header\Type\Char.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Header\Type\String.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="Header\InterFace\IEquateble.hpp">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
-    <ClInclude Include="Header\Type\Object.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Header\Type\BetweenValue.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
     <ClInclude Include="Header\InterFace\IParseble.hpp">
-      <Filter>ヘッダー ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="Header\Type\Type.hpp">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
     <ClInclude Include="Header\Frame\Frame.hpp">
@@ -89,32 +62,8 @@
     <ClCompile Include="Template\PreCompiled\Integration.cc">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
-    <ClCompile Include="Header\Type\Boolean.inl">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Header\Type\Char.inl">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Header\Type\Floating.inl">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Header\Type\Integer.inl">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Header\Type\Numeric.inl">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Header\Type\Object.inl">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="Header\Type\String.inl">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Readme.md" />
-    <None Include="Header\Type\BetweenValue.inl">
-      <Filter>ヘッダー ファイル</Filter>
-    </None>
   </ItemGroup>
 </Project>

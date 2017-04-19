@@ -130,29 +130,12 @@
     <ClInclude Include="Header\System\CoreSystem.hpp" />
     <ClInclude Include="Header\System\EntryPoint.hpp" />
     <ClInclude Include="Header\Configure\Integration.hh" />
-    <ClInclude Include="Header\Type\BetweenValue.hpp" />
-    <ClInclude Include="Header\Type\Boolean.hpp" />
-    <ClInclude Include="Header\Type\Char.hpp" />
-    <ClInclude Include="Header\Type\Floating.hpp" />
-    <ClInclude Include="Header\Type\Integer.hpp" />
-    <ClInclude Include="Header\Type\Numeric.hpp" />
-    <ClInclude Include="Header\Type\Object.hpp" />
-    <ClInclude Include="Header\Type\String.hpp" />
-    <ClInclude Include="Header\Type\Type.hpp" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Header\System\Window.hpp" />
-    <ClCompile Include="Header\Type\Boolean.inl" />
-    <ClCompile Include="Header\Type\Char.inl" />
-    <ClCompile Include="Header\Type\Floating.inl" />
-    <ClCompile Include="Header\Type\Integer.inl" />
-    <ClCompile Include="Header\Type\Numeric.inl" />
-    <ClCompile Include="Header\Type\Object.inl" />
-    <ClCompile Include="Header\Type\String.inl" />
     <ClCompile Include="Template\PreCompiled\Integration.cc" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Header\Type\BetweenValue.inl" />
     <None Include="Readme.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
