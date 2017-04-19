@@ -173,6 +173,9 @@
     <ProjectReference Include="..\..\..\win10_Environ\win10_Environ.vcxproj">
       <Project>{22968abe-e95c-4e46-8fbd-1e4b2bfbcadc}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\..\..\Win10_Math\Win10_Math.vcxproj">
+      <Project>{0d0c1541-7563-4d59-a757-4c219a5bfaeb}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
