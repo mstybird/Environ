@@ -1,4 +1,5 @@
 #pragma once
+
 /**
 	@file __CoreSystem.hxx
 	@date Create for 2017/03/03 22:36
