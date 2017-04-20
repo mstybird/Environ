@@ -20,8 +20,11 @@ namespace Environ {
 	class Float3 {
 	public:
 		Float3();
-		~Float3();
+		virtual ~Float3();
+		
 		Float3& Add(const float aX, const float aY, const float aZ);
+
+
 
 	private:
 		class __Float3;
