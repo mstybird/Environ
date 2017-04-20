@@ -13,9 +13,33 @@ namespace Environ {
 	{
 	}
 
-	Float3 & Float3::Add(const float aX, const float aY, const float aZ)
+	Environ::Float3::Float3(float aX, float aY, float aZ) :
+		$(new __Float3),
+		x($->RefX()),
+		y($->RefY()),
+		z($->RefZ())
 	{
-		$->Add(aX, aY, aZ);
+		x = aX;
+		y = aY;
+		z = aZ;
+	}
+
+	Float3 & Environ::Float3::operator=(const Float3 & aValue)
+	{
+		this->x = aValue.x;
+		this->y = aValue.y;
+		this->z = aValue.z;
 		return *this;
 	}
+
+	Float3 & Environ::Float3::operator+=(const Float3 & aValue)
+	{
+		this->x += aValue.x;
+		this->y += aValue.y;
+		this->z += aValue.z;
+		return *this;
+	}
+
+
+
 }
