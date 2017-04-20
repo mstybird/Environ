@@ -2,6 +2,7 @@
 
 #include<Math\Arithmetic\Float3.hpp>
 namespace Environ {
+
 	class Float3::__Float3 {
 	public:
 		__Float3();

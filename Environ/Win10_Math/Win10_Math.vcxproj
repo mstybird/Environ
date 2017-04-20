@@ -149,6 +149,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Float3.cpp" />
+    <ClCompile Include="Source\Vector3.cpp" />
     <ClCompile Include="Source\__Float3.cxx" />
     <ClCompile Include="Header\PreCompiled\Integration.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
