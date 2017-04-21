@@ -10,15 +10,12 @@
 bool Environ::SetupWizard() {
 
 	int id= Environ::Window::Create("Sample", 100, 100, 300, 300);
-	Float3 f;
-	Vector3 v;
-	Vector3 v2;
-	f += {1, 2, 3};
-	v += {3, 2, 1};
-	v = f;
-	v += v;
-
-
+	Float3 f{ 1,2,3 };
+	Float3 f2;
+	f2 += 4;
+	f *= f2;
+	auto f3 = f + f2;
+	
 
 	Environ::Frame::Create(id, 10, 20, 100, 100, "Frame");
 	

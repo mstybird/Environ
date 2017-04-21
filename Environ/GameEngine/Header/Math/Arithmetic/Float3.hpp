@@ -21,9 +21,9 @@ namespace Environ {
 	class Float3 {
 	public:
 		Float3();
-		//Float3(float x);
+		Float3(float x);
 		Float3(float aX, float aY, float aZ);
-		//Float3(const Float3& aV);
+		Float3(const Float3& aV);
 		virtual ~Float3();
 
 		bool operator==(const Float3& aValue)const;
@@ -43,16 +43,16 @@ namespace Environ {
 		Float3& operator/=(const Float3& aValue);
 		Float3& operator/=(float aValue);
 
-		Float3 operator+(const Float3& aValue)const;
+		Float3 operator+(Float3 aValue)const;
 		Float3 operator+(float aValue)const;
 
-		Float3 operator-(const Float3& aValue)const;
+		Float3 operator-(Float3 aValue)const;
 		Float3 operator-(float aValue)const;
 
-		Float3 operator*(const Float3& aValue)const;
+		Float3 operator*(Float3 aValue)const;
 		Float3 operator*(float aValue)const;
 
-		Float3 operator/(const Float3& aValue)const;
+		Float3 operator/(Float3 aValue)const;
 		Float3 operator/(float aValue)const;
 
 
