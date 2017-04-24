@@ -124,8 +124,12 @@
     <ClInclude Include="Header\Frame\Frame.hpp" />
     <ClInclude Include="Header\InterFace\IEquateble.hpp" />
     <ClInclude Include="Header\InterFace\IParseble.hpp" />
+    <ClInclude Include="Header\Math\Arithmetic\Float2.hpp" />
     <ClInclude Include="Header\Math\Arithmetic\Float3.hpp" />
+    <ClInclude Include="Header\Math\Arithmetic\Float4.hpp" />
+    <ClInclude Include="Header\Math\Arithmetic\Vector2.hpp" />
     <ClInclude Include="Header\Math\Arithmetic\Vector3.hpp" />
+    <ClInclude Include="Header\Math\Arithmetic\Vector4.hpp" />
     <ClInclude Include="Header\PreCompiled\C++.hpp" />
     <ClInclude Include="Header\PreCompiled\C++11.hpp" />
     <ClInclude Include="Header\Rendering\LayerGUI.hpp" />

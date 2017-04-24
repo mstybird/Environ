@@ -60,6 +60,18 @@
     <ClInclude Include="Header\Math\Arithmetic\Vector3.hpp">
       <Filter>ヘッダー ファイル</Filter>
     </ClInclude>
+    <ClInclude Include="Header\Math\Arithmetic\Float2.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Math\Arithmetic\Float4.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Math\Arithmetic\Vector2.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="Header\Math\Arithmetic\Vector4.hpp">
+      <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Header\System\Window.hpp">
