@@ -144,12 +144,17 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header\__Float.hxx" />
+    <ClInclude Include="Header\__Float2.hxx" />
+    <ClInclude Include="Header\__Float3.hxx" />
     <ClInclude Include="Header\PreCompiled\Integration.hh" />
+    <ClInclude Include="Header\__Float4.hxx" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\Float2.cpp" />
     <ClCompile Include="Source\Float3.cpp" />
+    <ClCompile Include="Source\Vector2.cpp" />
     <ClCompile Include="Source\Vector3.cpp" />
+    <ClCompile Include="Source\__Float2.cxx" />
     <ClCompile Include="Source\__Float3.cxx" />
     <ClCompile Include="Header\PreCompiled\Integration.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
