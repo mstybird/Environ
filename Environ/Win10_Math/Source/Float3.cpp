@@ -1,6 +1,4 @@
-#include "..\..\GameEngine\Header\Math\Arithmetic\Float3.hpp"
-#include "..\..\GameEngine\Header\Math\Arithmetic\Float3.hpp"
-#include"__Float.hxx"
+#include"__Float3.hxx"
 namespace Environ {
 
 	Environ::Float3::Float3():
@@ -26,7 +24,7 @@ namespace Environ {
 	Environ::Float3::Float3(const Float3 & aV):
 		Float3()
 	{
-		$ = std::make_unique<__Float3>(aV.$);
+		$ = std::make_unique<__Float3>(*aV.$);
 	}
 
 	Environ::Float3::~Float3()
