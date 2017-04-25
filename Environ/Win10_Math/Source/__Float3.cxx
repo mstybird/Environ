@@ -1,6 +1,28 @@
-#include"__Float.hxx"
+#include"__Float3.hxx"
 
 namespace Environ {
+
+
+
+	Float3::__Float3::__Float3() :
+		DirectX::SimpleMath::Vector3()
+	{
+	}
+
+	Float3::__Float3::__Float3(float aXYZ) :
+		DirectX::SimpleMath::Vector3(aXYZ)
+	{
+	}
+
+	Float3::__Float3::__Float3(float aX, float aY, float aZ) :
+		DirectX::SimpleMath::Vector3(aX,aY,aZ)
+	{
+	}
+
+	Float3::__Float3::~__Float3()
+	{
+	}
+
 	void Float3::__Float3::operator+=(__Float3 aValue)
 	{
 		DirectX::SimpleMath::Vector3::operator+=(aValue);
@@ -67,9 +89,6 @@ namespace Environ {
 	}
 
 
-	Float3::__Float3::~__Float3()
-	{
-	}
 
 }
 
