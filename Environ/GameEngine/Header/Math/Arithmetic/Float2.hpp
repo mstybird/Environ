@@ -15,14 +15,14 @@
 namespace Environ {
 
 	/*
-		Float型の値3つの汎用クラス
+		Float型の値2つの汎用クラス
 	*/
 
 	class Float2 {
 	public:
 		Float2();
 		Float2(float x);
-		Float2(float aX, float aY, float aZ);
+		Float2(float aX, float aY);
 		Float2(const Float2& aV);
 		virtual ~Float2();
 
@@ -58,6 +58,8 @@ namespace Environ {
 
 	private:
 		class __Float2;
+	protected:
+		//フレームワークで使用している。
 		std::unique_ptr<__Float2>$;
 
 	public:
