@@ -1,3 +1,5 @@
+#include "..\..\GameEngine\Header\Math\Arithmetic\Float3.hpp"
+#include "..\..\GameEngine\Header\Math\Arithmetic\Float3.hpp"
 #include"__Float.hxx"
 namespace Environ {
 
@@ -29,6 +31,16 @@ namespace Environ {
 
 	Environ::Float3::~Float3()
 	{
+	}
+
+	bool Float3::operator==(const Float3 & aValue) const
+	{
+		return false;
+	}
+
+	bool Float3::operator!=(const Float3 & aValue) const
+	{
+		return false;
 	}
 
 

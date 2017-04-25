@@ -6,8 +6,8 @@ namespace Environ {
 	class Vector3 :
 		public Float3 {
 	public:
-		
 		Vector3();
+		Vector3(float aX, float aY, float aZ);
 		Vector3(const Float3& aValue);
 		virtual ~Vector3();
 
@@ -20,13 +20,11 @@ namespace Environ {
 		Vector3& operator-=(float aValue);
 
 		Vector3& operator*=(const Float3& aValue);
-		Vector3& operator*=(float aValue);
 
 		Vector3& operator/=(const Float3& aValue);
-		Vector3& operator/=(float aValue);
 
-		Vector3& operator+(const Float3& aValue)const;
-		Vector3& operator+(float aValue)const;
+		Vector3 operator+(const Float3& aValue)const;
+		Vector3 operator+(float aValue)const;
 
 		Vector3 operator-(const Float3& aValue)const;
 		Vector3 operator-(float aValue)const;
@@ -49,12 +47,11 @@ namespace Environ {
 		Vector3& Reflect(const Vector3& aNormal);
 		float Dot(const Vector3& aRightVector)const;
 		Vector3& Cross(const Vector3& aVector);
-		Vector3& Clamp(const Vector3& aMin, const Vector3& aMax)const;
+		Vector3& Clamp(const Vector3& aMin, const Vector3& aMax);
 
-		void Normalize(Vector3& aResult)const;
-		void Reflect(const Vector3& aNormal, Vector3& aResult)const;
-		void Cross(const Vector3& aVector, Vector3& aResult);
-		void Clamp(const Vector3& aMin, const Vector3& aMax, Vector3&aResult)const;
+		static void Normalize(const Vector3& aVector,Vector3& aResult);
+		static void Cross(const Vector3& aVectorLeft, const Vector3& aVectorRight, Vector3& aResult);
+		static void Clamp(const Vector3& aVector, const Vector3& aMin, const Vector3& aMax, Vector3&aResult);
 
 
 
@@ -64,8 +61,7 @@ namespace Environ {
 		static void Max(const Vector3& aVec1, const Vector3& aVec2, Vector3& aResult);
 		static void Lerp(const Vector3& aVec1, const Vector3& aVec2, float aRatio, Vector3& aResult);
 		static void SLerp(const Vector3& aVec1, const Vector3& aVec2, float aRatio, Vector3& aResult);
-		static void Hermite(const Vector3& aStartPosition, const Vector3& aStartVector, const Vector3& aEndPosition, const Vector3& aEndVector, Vector3& aResult);
-		static void Reflect(const Vector3& aInVector,const Vector3& aNormal, Vector3& aResult);
+		static void Hermite(const Vector3& aStartPosition, const Vector3& aStartVector, const Vector3& aEndPosition, const Vector3& aEndVector,float aRatio, Vector3& aResult);
 
 		static const Vector3 cZero;
 		static const Vector3 cOne;

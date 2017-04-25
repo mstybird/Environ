@@ -22,7 +22,7 @@ namespace Environ {
 	public:
 		Float3();
 		Float3(float x);
-		Float3(float aX, float aY, float aZ);
+		Float3(float aX, float aY = .0f, float aZ = .0f);
 		Float3(const Float3& aV);
 		virtual ~Float3();
 
@@ -58,6 +58,8 @@ namespace Environ {
 
 	private:
 		class __Float3;
+	protected:
+		//フレームワークで使用している。
 		std::unique_ptr<__Float3>$;
 
 	public:
