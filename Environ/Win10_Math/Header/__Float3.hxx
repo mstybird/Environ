@@ -10,7 +10,6 @@ namespace Environ {
 		__Float3();
 		__Float3(float x);
 		__Float3(float aX, float aY, float aZ);
-		__Float3(const Float3& aV);
 		virtual ~__Float3();
 
 		void operator+=(__Float3 aValue);
