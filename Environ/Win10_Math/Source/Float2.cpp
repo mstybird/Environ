@@ -1,3 +1,4 @@
+#include "..\..\GameEngine\Header\Math\Arithmetic\Float2.hpp"
 #include"__Float2.hxx"
 namespace Environ {
 
@@ -11,13 +12,19 @@ namespace Environ {
 	Environ::Float2::Float2(float aX):
 		Float2()
 	{
-		$ = std::make_unique<__Float2>(aX);
+		*$ = { aX };
 	}
 
-	Environ::Float2::Float2(float aX, float aY, float aZ) :
+	Environ::Float2::Float2(float aX, float aY) :
 		Float2()
 	{
-		$ = std::make_unique<__Float2>(aX, aY, aZ);
+		*$ = { aX,aY };
+	}
+
+	Float2::Float2(const Float2 & aV):
+		Float2()
+	{
+		*$ = *aV.$;
 	}
 
 

@@ -81,9 +81,24 @@ namespace Environ {
 	}
 
 	//Float2‚Ì‰ÁZˆ—
+	Vector2 & Environ::Vector2::operator*=(float aValue)
+	{
+		Float2::operator*=(aValue);
+		return *this;
+	}
+
+
+	//Float2‚Ì‰ÁZˆ—
 	Vector2 & Environ::Vector2::operator/=(const Float2 & aValue)
 	{
 		Float2::operator/=(aValue);
+		return *this;
+	}
+
+	//Float2‚Ì‰ÁZˆ—
+	Vector2 & Environ::Vector2::operator/=(float aValue)
+	{
+		Float2::operator/(aValue);
 		return *this;
 	}
 

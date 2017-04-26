@@ -70,10 +70,6 @@ namespace Environ {
 
 	}
 
-	Float2::__Float2::__Float2() {
-
-	}
-
 	Float2::__Float2::~__Float2()
 	{
 	}
